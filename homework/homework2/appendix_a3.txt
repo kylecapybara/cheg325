@@ -1,0 +1,130 @@
+chemical_name,chemical_formula,state,delta_h_form,delta_g_form
+Methane,CH4,g,-74.5,-50.5
+Ethane,C2H6,g,-83.8,-31.9
+Propane,C3H8,g,-104.7,-24.3
+n-Butane,C4H10,g,-125.8,-16.6
+n-Pentane,C5H12,g,-146.8,-8.7
+n-Pentane,C5H12,l,-173.1,-9.2
+n-Hexane,C6H14,g,-166.9,0.2
+n-Heptane,C7H16,g,-187.8,8.3
+n-Octane,C8H18,g,-208.8,16.3
+n-Octane,C8H18,l,-255.1,—
+Acetylene,C2H2,g,227.5,210.0
+Ethylene,C2H4,g,52.5,68.5
+Propylene,C3H6,g,19.7,62.2
+1-Butene,C4H8,g,1.2,70.3
+1-Pentene,C5H10,g,-21.3,78.4
+1-Hexene,C6H12,g,-42.0,86.8
+1-Heptene,C7H14,g,-62.8,—
+1,3-Butadiene,C4H6,g,109.2,149.8
+Benzene,C6H6,g,82.9,129.7
+Benzene,C6H6,l,49.1,124.5
+Ethylbenzene,C8H10,g,29.9,130.9
+Naphthalene,C10H8,s,78.5,—
+Styrene,C8H8,g,147.4,213.9
+Toluene,C7H8,g,50.2,122.1
+Toluene,C7H8,l,12.2,113.6
+Cyclohexane,C6H12,g,-123.1,31.9
+Cyclohexane,C6H12,l,-156.2,26.9
+Cyclopropane,C3H6,g,53.3,104.5
+Methylcyclohexane,C7H14,g,-154.8,27.5
+Methylcyclohexane,C7H14,l,-190.2,20.6
+Cyclohexene,C6H10,l,102.5,—
+Acetaldehyde,C2H4O,g,-166.2,-134.4
+Acetic Acid,CH3COOH,l,-484.5,-389.9
+Acetic Acid,CH3COOH,aq,-486.1,-396.5
+1,2-Ethanediol,C2H6O2,l,-454.8,-323.1
+Ethanol,C2H6O,g,-235.1,-168.5
+Ethanol,C2H6O,l,-277.7,-174.8
+Ethyl acetate,CH3COOC2H5,l,-478.8,-332.4
+Ethylene oxide,C2H4O,g,-52.6,-13.0
+Formaldehyde,CH2O,g,-108.6,-102.5
+Formic acid,HCOOH,l,-424.7,-361.4
+Methanol,CH4O,g,-200.7,-162.0
+Methanol,CH4O,l,238.7,-166.3
+Phenol,C6H5OH,s,-165.0,-50.9
+Aluminum oxide,Al2O3,s,α,-1675.7,-1582.3
+Aluminum chloride,AlCl3,s,-704.2,-628.8
+Ammonia,NH3,g,-46.1,-16.5
+Ammonia,NH3,aq,―,-26.5
+Ammonium nitrate,NH4NO3,s,-365.6,-183.9
+Ammonium chloride,NH4Cl,s,-314.4,-202.9
+Barium oxide,BaO,s,-553.5,-525.1
+Barium chloride,BaCl2,s,-858.6,-810.4
+Bromine,Br2,l,0,0
+Bromine,Br2,g,30.9,3.1
+Calcium carbide,CaC2,s,-59.8,-64.9
+Calcium carbonate,CaCO3,s,-1206.9,-1128.8
+Calcium chloride,CaCl2,s,-795.8,-748.1
+Calcium chloride,CaCl2,aq,―,-8101.9
+Calcium chloride,CaCl2·6H2O,s,-2607.9,—
+Calcium hydroxide,Ca(OH)2,s,-986.1,-898.5
+Calcium hydroxide,Ca(OH)2,aq,―,-868.1
+Calcium oxide,CaO,s,-635.1,-604.0
+Carbon dioxide,CO2,g,-393.5,-394.4
+Carbon dioxide,CO2,aq,-413.8,-386.0
+Carbon disulfide,CS2,l,89.7,65.3
+Carbon monoxide,CO,g,-110.5,-137.2
+Carbon tetrachloride,CCl4,l,-128.4,-65.2
+Carbonic acid,H2CO3,aq,-699.7,-623.1
+Hydrochloric acid,HCl,g,-92.3,-95.3
+Hydrochloric acid,HCl,aq,-167.2,-131.2
+Hydrogen bromide,HBr,g,-36.4,-53.5
+Hydrogen cyanide,HCN,g,135.1,124.7
+Hydrogen cyanide,HCN,l,108.9,125.0
+Hydrogen fluoride,HF,g,-271.1,-273.2
+Hydrogen iodide,HI,g,26.5,1.7
+Hydrogen peroxide,H2O2,l,-187.8,-120.4
+Hydrogen sulfide,H2S,g,-20.6,-33.6
+Hydrogen sulfide,H2S,aq,-39.7,-27.8
+Iodine,I2,g,62.3,19.8
+Iodine,I2,s,0,0
+Iron (II),FeO,s,-272.0,—
+Iron (III) oxide (hematite),Fe2O3,s,-824.2,-742.2
+Iron (II) sulfide,FeS,s,α,-100.0,-100.4
+Iron sulfide (pyrite),FeS2,s,-178.2,-166.9
+Lead oxide,PbO,s,yellow,-217.3,-187.9
+Lead oxide,PbO,s,red,-219.0,-188.9
+Lead dioxide,PbO2,s,-277.4,-217.3
+Lithium chloride,LiCl,s,-408.6,—
+Lithium chloride,LiCl·H2O,s,-712.6,—
+Lithium chloride,LiCl·2H2O,s,-1012.7,—
+Lithium chloride,LiCl·3H2O,s,-1311.3,—
+Magnesium oxide,MgO,s,-601.7,-569.4
+Magnesium carbonate,MgCO3,s,-1095.8,-1012.1
+Magnesium chloride,MgCl2,s,-641.3,-591.8
+Mercury (I) chloride,Hg2Cl2,s,-265.2,-210.8
+Mercury (II) chloride,HgCl2,s,-224.3,-178.6
+Nitric acid,HNO3,l,-174.1,-80.7
+Nitric acid,HNO3,aq,―,-111.3
+Nitric oxide,NO,g,90.3,86.6
+Nitrogen dioxide,NO2,g,33.2,51.3
+Nitrous oxide,N2O,g,82.1,104.2
+Nitrogen tetroxide,N2O4,g,9.2,97.9
+Potassium chloride,KCl,s,-436.8,-409.1
+Silicon dioxide,SiO2,s,α,-910.9,-856.6
+Silver bromide,AgBr,s,-100.4,-96.9
+Silver chloride,AgCl,s,-127.1,-109.8
+Silver nitrate,AgNO3,s,-124.4,-33.4
+Sodium bicarbonate,NaHCO3,s,-945.6,-847.9
+Sodium carbonate,Na2CO3,s,-1130.7,-1044.4
+Sodium carbonate,Na2CO3·10H2O,s,-4081.3,—
+Sodium chloride,NaCl,s,-411.2,-384.1
+Sodium chloride,NaCl,aq,―,-393.1
+Sodium hydroxide,NaOH,s,-425.6,-379.5
+Sodium hydroxide,NaOH,aq,―,-419.2
+Sodium sulfate,Na2SO4,s,-1382.8,-1265.2
+Sodium sulfate·decahydrate,Na2SO4·10H2O,s,-4322.5,-3642.3
+Sulfur,S2,g,129.8,81.0
+Sulfur,S2,l,1.1,0.3
+Sulfur,S2,s,0,0
+Sulfur dioxide,SO2,g,-296.8,-300.2
+Sulfur trioxide,SO3,g,-395.7,-371.1
+Sulfur trioxide,SO3,l,-441.0,—
+Sulfuric acid,H2SO4,l,-814.0,-690.0
+Sulfuric acid,H2SO4,aq,―,-744.5
+Water,H2O,g,-241.8,-228.6
+Water,H2O,l,-285.8,-237.1
+Zinc oxide,ZnO,s,-348.3,-318.3
+Nitrogen,N2,g,0,0
+Hydrogen,H2,g,0,0

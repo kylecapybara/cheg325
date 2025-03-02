@@ -1,0 +1,68 @@
+\documentclass{article}
+
+\input{preamble}
+\usepackage{tikz-3dplot}
+\usepackage{booktabs}
+\usepackage{titling}
+\usepackage{fancyhdr}
+\usetikzlibrary{patterns}
+
+\usepackage{tcolorbox}
+\usepackage[export]{adjustbox}
+\usepackage{tikz}
+
+\tcbset{colback=blue!7!white}
+\tcbsetforeverylayer{colframe=blue!75!black}
+
+
+\pretitle{\vspace{-4em}\begin{flushleft}\LARGE} % Adjust the size and alignment
+    \posttitle{\end{flushleft}}
+    \preauthor{\begin{flushleft}\large} % Adjust the size and alignment
+    \postauthor{\hspace{2em} \large \thedate\end{flushleft}} % Place author and date on the same line
+    \predate{} % Remove the default date formatting
+    \postdate{} % Remove the default date formatting
+
+\pagestyle{fancy}
+\fancyhf{} % Clear all header and footer fields
+\fancyfoot[R]{\thepage} % Right-align the page number in the footer
+\renewcommand{\headrulewidth}{0pt} % Remove the header rule
+\renewcommand{\footrulewidth}{0pt} % Remove the footer rule
+\setlength{\fboxrule}{1pt}
+
+\geometry{
+    top=2cm,    % Top margin
+    bottom=3cm, % Bottom margin
+    left=2.5cm, % Left margin
+    right=2.5cm % Right margin
+}
+\title{\bfseries CHEG325 Homework 4 Extra Problem}
+\author{Kyle Wodehouse}
+\date{}
+
+\begin{document}
+\maketitle
+\section{prompting the ai}
+I chose to use \textbf{deepseek} to try and solve this question. I prompted deepseek with the following 2 images:
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\textwidth, frame]{img/1.png}
+\end{figure}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\textwidth, frame]{img/2.png}
+\end{figure}
+
+the following pages contain my chat with the ai trying both coding and repetitive prompting to get it to give me the right answer.
+
+\includepdf[pages=-]{conversation.pdf}
+
+\eject \pdfpagewidth=8.5in \pdfpageheight=2in
+
+
+\section{validating the code}
+
+of course, this code has to be run by me in a notebook to make sure it actually works. the next page is me doing that.
+
+
+\end{document}

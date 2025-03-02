@@ -1,0 +1,53 @@
+\documentclass{article}
+
+\input{preamble}
+\usepackage{tikz-3dplot}
+\usepackage{booktabs}
+\usepackage{titling}
+\usepackage{fancyhdr}
+\usetikzlibrary{patterns}
+
+\usepackage{tcolorbox}
+\usepackage[export]{adjustbox}
+\usepackage{tikz}
+
+\tcbset{colback=blue!7!white}
+\tcbsetforeverylayer{colframe=blue!75!black}
+
+
+\pretitle{\vspace{-4em}\begin{flushleft}\LARGE} % Adjust the size and alignment
+    \posttitle{\end{flushleft}}
+    \preauthor{\begin{flushleft}\large} % Adjust the size and alignment
+    \postauthor{\hspace{2em} \large \thedate\end{flushleft}} % Place author and date on the same line
+    \predate{} % Remove the default date formatting
+    \postdate{} % Remove the default date formatting
+
+\pagestyle{fancy}
+\fancyhf{} % Clear all header and footer fields
+\fancyfoot[R]{\thepage} % Right-align the page number in the footer
+\renewcommand{\headrulewidth}{0pt} % Remove the header rule
+\renewcommand{\footrulewidth}{0pt} % Remove the footer rule
+\setlength{\fboxrule}{1pt}
+
+\geometry{
+    top=2cm,    % Top margin
+    bottom=3cm, % Bottom margin
+    left=2.5cm, % Left margin
+    right=2.5cm % Right margin
+}
+\title{\bfseries CHEG325 Homework 1 Volterra Bullshit}
+\author{Kyle Wodehouse}
+\date{}
+
+\begin{document}
+\maketitle
+\noindent
+Starting with this equation
+\[ x_1 \p{\bar\theta_1}{x_1}{T,P} + x_2 \p{\bar\theta_2}{x_1}{T,P} = 0 \tag{8.2-19b} \]
+and now recalling and rearranging the definition of the beloved volterra derivative
+\[ \p{\bar\theta_i}{x_i}{T,P} = \volterra{\bar\theta_i}{x_i}{T,P} + \frac{1}{C} \sum_{j=1}^{C} \p{\bar\theta_i}{x_j}{T,P} \tag*{\text{volterra def}}\]
+now, to attain the greatness and love and support of sir lord beris we shove that right into (8.2-19b),
+\[ x_1 \left( \volterra{\bar\theta_1}{x_1}{T,P} + \frac{1}{2}   \right) \]
+
+
+\end{document}

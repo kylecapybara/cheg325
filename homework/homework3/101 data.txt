@@ -1,0 +1,5 @@
+Component,x,A,B
+Ethane,5,817.08,4.402229
+Propane,10,1051.38,4.517190
+n-Butane,40,1267.56,4.617679
+2-Methylpropane,45,1183.44,4.474013

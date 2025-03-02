@@ -1,0 +1,189 @@
+
+ + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + +
+ + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + +
+ + +                                                                         + +
+ + +                      ASPEN PLUS CALCULATION HISTORY                     + +
+ + +                                                                         + +
+ + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + +
+ + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + +
+
+ ASPEN PLUS IS A TRADEMARK OF           HOTLINE:
+ ASPEN TECHNOLOGY, INC.                 U.S.A. 888/996-7100
+ 781/221-6400                           EUROPE (44) 1189-226555
+
+ PLATFORM: WIN-X64                                       FEBRUARY 21, 2025   
+ VERSION: 38.0   Build 380                               FRIDAY      
+ INSTALLATION:                                           9:24:52 A.M.        
+
+ THIS COPY OF ASPEN PLUS LICENSED TO UNIVERSITY OF DELAWARE          
+
+
+      ASPEN PLUS (R) IS A PROPRIETARY PRODUCT OF ASPEN TECHNOLOGY, INC.
+      (ASPENTECH), AND MAY BE USED ONLY UNDER AGREEMENT WITH ASPENTECH.
+      RESTRICTED RIGHTS LEGEND:  USE, REPRODUCTION, OR DISCLOSURE BY THE
+      U.S. GOVERNMENT IS SUBJECT TO RESTRICTIONS SET FORTH IN 
+      (i) FAR 52.227-14, Alt. III, (ii) FAR 52.227-19, (iii) DFARS 
+      252.227-7013(c)(1)(ii), or (iv) THE ACCOMPANYING LICENSE AGREEMENT,
+      AS APPLICABLE. FOR PURPOSES OF THE FAR, THIS SOFTWARE SHALL BE DEEMED
+      TO BE "UNPUBLISHED" AND LICENSED WITH DISCLOSURE PROHIBITIONS.
+      CONTRACTOR/SUBCONTRACTOR: ASPEN TECHNOLOGY, INC. 20 CROSBY DRIVE,
+      BEDFORD, MA 01730.
+ *** INPUT SUMMARY ***
+
+ >>CURRENT RUN
+
+   ORIGINAL RUN                           FEBRUARY 21, 2025   
+   9:24:52 A.M.                           FRIDAY      
+   INPUT FILE: _0859gyp.inm
+   RUN ID : _0859gyp
+          1    ;
+          2    ;Input file created by Aspen Plus Rel. 38.0 at 09:24:52 Fri Feb 21, 2025
+          3    ;Directory C:\Users\Kyle Wodehouse\macdocs\CHEG325\homework\homework2\aspen  Runid HOMEWORK2_Q1
+          4    ;
+          5
+          6
+          7    PROP
+          8
+          9    DYNAMICS
+         10        DYNAMICS RESULTS=ON
+         11
+         12    TITLE 'cheg325 homework2 question1'
+         13
+         14    IN-UNITS MET SHORT-LENGTH=mm
+         15
+         16    DESCRIPTION '
+         17        Chemical Simulation with Metric Units :
+         18        C, bar, kg/hr, kmol/hr, Gcal/hr, cum/hr.
+         19
+         20        Property Method: NRTL
+         21
+         22        Flow basis for input: Mole
+         23
+         24        Stream report composition: Mole flow
+         25        '
+         26
+         27    DATABANKS 'APV120 PURE38' / 'APV120 AQUEOUS' / 'APV120 SOLIDS' &
+         28             / 'APV120 INORGANIC' / 'APESV120 AP-EOS' /  &
+         29            'NISTV120 NIST-TRC' / 'APESV120 ACIDGAS' /  &
+         30            'APV120 ASPENPCD' / 'APV120 BIODIESEL' / 'APV120 COMBUST' &
+         31             / 'APV120 ELECPURE' / 'APV120 EOS-LIT' /  &
+         32            'APV120 ETHYLENE' / 'APV120 HYSYS' / 'APV120 INITIATO' &
+         33             / 'APV120 NRTL-SAC' / 'APV120 PC-SAFT' /  &
+         34            'APV120 POLYMER' / 'APV120 POLYPCSF' / 'APV120 PURE25' &
+         35             / 'APV120 PURE26' / 'APV120 PURE27' / 'APV120 PURE28' &
+         36             / 'APV120 PURE32' / 'APV120 PURE35' / 'APV120 PURE36' &
+         37             / 'APV120 PURE37' / 'APV120 SEGMENT' /  &
+         38            'FACTV120 FACTPCD'
+         39
+         40    PROP-SOURCES 'APV120 PURE38' / 'APV120 AQUEOUS' /  &
+         41            'APV120 SOLIDS' / 'APV120 INORGANIC' / 'APESV120 AP-EOS' &
+         42             / 'NISTV120 NIST-TRC' / 'APESV120 ACIDGAS' /  &
+         43            'APV120 ASPENPCD' / 'APV120 BIODIESEL' / 'APV120 COMBUST' &
+         44             / 'APV120 ELECPURE' / 'APV120 EOS-LIT' /  &
+         45            'APV120 ETHYLENE' / 'APV120 HYSYS' / 'APV120 INITIATO' &
+         46             / 'APV120 NRTL-SAC' / 'APV120 PC-SAFT' /  &
+         47            'APV120 POLYMER' / 'APV120 POLYPCSF' / 'APV120 PURE25' &
+         48             / 'APV120 PURE26' / 'APV120 PURE27' / 'APV120 PURE28' &
+         49             / 'APV120 PURE32' / 'APV120 PURE35' / 'APV120 PURE36' &
+         50             / 'APV120 PURE37' / 'APV120 SEGMENT' /  &
+         51            'FACTV120 FACTPCD'
+         52
+         53    COMPONENTS
+         54        WATER H2O
+         55
+         56    PROPERTIES IAPWS-95
+         57
+         58    ESTIMATE ALL
+         59
+         60    PROP-SET CAPY2 PRES G H S CP UNITS='bar' 'kJ/kmol'  &
+         61            'kJ/kmol-K' 'kJ/kmol-K' SUBSTREAM=MIXED COMPS=WATER  &
+         62            PHASE=L V
+         63
+         64    PROPERTY-REP PCES PROP-DATA DFMS
+         65
+         66    PROP-TABLE PT-1 PROPS
+         67        MOLE-FLOW WATER 1.
+         68        STATE TEMP=290.
+         69        VARY PRES
+         70        RANGE LIST=1. 25. 50. 75. 100.
+         71        TABULATE PROPERTIES=CAPY2
+         72
+         73    PROP-TABLE PTENV-1 PTENVELOPE
+         74        PROPERTIES IAPWS-95 FREE-WATER=STEAM-TA SOLU-WATER=3  &
+         75            TRUE-COMPS=YES
+         76        MOLE-FLOW WATER 1.
+         77        ENVELOPES VFRAC=1
+         78        PARAM
+         79        TABULATE PROPERTIES=CAPY2
+         80
+         81    PROP-TABLE PTENV-2 PTENVELOPE
+         82        MOLE-FLOW WATER 1.
+         83        ENVELOPES VFRAC=1
+         84        PARAM
+         85        TABULATE "WATER" PROPERTIES=CAPY2
+         86
+         87    PROP-TABLE PURE-1 PROPS
+         88        IN-UNITS MET PRESSURE=bar PDROP=atm SHORT-LENGTH=mm
+         89        ANALYSIS ANAL-TYPE=PURE PURE-PROP='G' UNITS='MJ/kmol'  &
+         90            PURE-PHASES= V L
+         91        MOLE-FLOW WATER 1
+         92        VARY TEMP
+         93        RANGE VARVALUE=RANGE LOWER=250. UPPER=500. NPOINT=50
+         94        VARY PRES
+         95        RANGE LIST=20.
+         96        PARAM
+         97
+         98    PROP-TABLE PURE-3 PROPS
+         99        IN-UNITS MET PRESSURE=bar PDROP=atm SHORT-LENGTH=mm
+        100        ANALYSIS ANAL-TYPE=PURE PURE-PROP='G' UNITS='kJ/kmol'  &
+        101            PURE-PHASES= V L
+        102        MOLE-FLOW WATER 1
+        103        VARY TEMP
+        104        RANGE VARVALUE=RANGE LOWER=250. UPPER=500. NPOINT=50
+        105        VARY PRES
+        106        RANGE LIST=20.
+        107        PARAM
+        108    ;
+        109    ;
+        110    ;
+        111    ;
+        112    ;
+ *** INPUT TRANSLATOR MESSAGES ***
+
+  *** THIS RUN USES THE PROPERTIES ENTERPRISE DATABASE ***
+      ASPENDB.ENGR.UDEL.EDU\REMOTESQL.APESV110 : (DATAVERSION - 37.0.0.22)    
+      ASPENDB.ENGR.UDEL.EDU\REMOTESQL.APESV120 : (DATAVERSION - 38.0.0.14)    
+      ASPENDB.ENGR.UDEL.EDU\REMOTESQL.APV110 : (DATAVERSION - 37.0.0.27)      
+      ASPENDB.ENGR.UDEL.EDU\REMOTESQL.APV120 : (DATAVERSION - 38.0.0.20)      
+      ASPENDB.ENGR.UDEL.EDU\REMOTESQL.APV86 : (DATAVERSION - 32.0.0.7)        
+      ASPENDB.ENGR.UDEL.EDU\REMOTESQL.FACTV110 : (DATAVERSION - 37.0.0.11)    
+      ASPENDB.ENGR.UDEL.EDU\REMOTESQL.FACTV120 : (DATAVERSION - 38.0.0.1)     
+      ASPENDB.ENGR.UDEL.EDU\REMOTESQL.FACTV86 : (DATAVERSION - 32.0.0.1)      
+      ASPENDB.ENGR.UDEL.EDU\REMOTESQL.NISTV110 : (DATAVERSION - 37.0.0.27)    
+      ASPENDB.ENGR.UDEL.EDU\REMOTESQL.NISTV120 : (DATAVERSION - 38.0.0.12)    
+      ASPENDB.ENGR.UDEL.EDU\REMOTESQL.NISTV86 : (DATAVERSION - 32.0.0.6)      
+
+      INFORMATION IN PHYSICAL PROPERTY SYSTEM                  (PCERTE.10)      
+      STRUCTURE FOR COMPONENT WATER HAS NOT BEEN DEFINED.                       
+      PCES CANNOT USE GROUP-CONTRIBUTION METHODS TO ESTIMATE MISSING PROPERTIES.
+
+ PDF updated                                                                      TIME =      2.33
+
+ *** CALCULATION TRACE ***
+
+ CHEG325 HOMEWORK2 QUESTION1                                     
+
+
+ Table Generation begins                                                          Time =      0.03
+
+      BEGIN CALCULATIONS FOR PROP-TABLE PT-1                                      TIME =      0.03
+
+      BEGIN CALCULATIONS FOR PROP-TABLE PTENV-1                                   TIME =      0.03
+
+      BEGIN CALCULATIONS FOR PROP-TABLE PTENV-2                                   TIME =      0.04
+
+      BEGIN CALCULATIONS FOR PROP-TABLE PURE-1                                    TIME =      0.04
+
+      BEGIN CALCULATIONS FOR PROP-TABLE PURE-3                                    TIME =      0.04
+
+ Results generated                                                                Time =      0.05

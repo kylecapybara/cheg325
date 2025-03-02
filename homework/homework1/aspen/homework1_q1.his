@@ -1,0 +1,169 @@
+
+ + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + +
+ + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + +
+ + +                                                                         + +
+ + +                      ASPEN PLUS CALCULATION HISTORY                     + +
+ + +                                                                         + +
+ + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + +
+ + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + +
+
+ ASPEN PLUS IS A TRADEMARK OF           HOTLINE:
+ ASPEN TECHNOLOGY, INC.                 U.S.A. 888/996-7100
+ 781/221-6400                           EUROPE (44) 1189-226555
+
+ PLATFORM: WIN-X64                                       FEBRUARY 4, 2025    
+ VERSION: 38.0   Build 380                               TUESDAY     
+ INSTALLATION:                                           9:40:19 P.M.        
+
+ THIS COPY OF ASPEN PLUS LICENSED TO UNIVERSITY OF DELAWARE          
+
+
+      ASPEN PLUS (R) IS A PROPRIETARY PRODUCT OF ASPEN TECHNOLOGY, INC.
+      (ASPENTECH), AND MAY BE USED ONLY UNDER AGREEMENT WITH ASPENTECH.
+      RESTRICTED RIGHTS LEGEND:  USE, REPRODUCTION, OR DISCLOSURE BY THE
+      U.S. GOVERNMENT IS SUBJECT TO RESTRICTIONS SET FORTH IN 
+      (i) FAR 52.227-14, Alt. III, (ii) FAR 52.227-19, (iii) DFARS 
+      252.227-7013(c)(1)(ii), or (iv) THE ACCOMPANYING LICENSE AGREEMENT,
+      AS APPLICABLE. FOR PURPOSES OF THE FAR, THIS SOFTWARE SHALL BE DEEMED
+      TO BE "UNPUBLISHED" AND LICENSED WITH DISCLOSURE PROHIBITIONS.
+      CONTRACTOR/SUBCONTRACTOR: ASPEN TECHNOLOGY, INC. 20 CROSBY DRIVE,
+      BEDFORD, MA 01730.
+ *** INPUT SUMMARY ***
+
+ >>CURRENT RUN
+
+   ORIGINAL RUN                           FEBRUARY 4, 2025    
+   9:40:19 P.M.                           TUESDAY     
+   INPUT FILE: _0552uxy.inm
+   RUN ID : _0552uxy
+          1    ;
+          2    ;Input file created by Aspen Plus Rel. 38.0 at 21:40:18 Tue Feb 4, 2025
+          3    ;Directory C:\Users\Kyle Wodehouse\Documents\AspenTech\Aspen Plus V12.0  Runid HOMEWORK1_Q1
+          4    ;
+          5
+          6
+          7    PROP
+          8
+          9    DYNAMICS
+         10        DYNAMICS RESULTS=ON
+         11
+         12    TITLE 'cheg325 homework1 question1'
+         13
+         14    IN-UNITS MET SHORT-LENGTH=mm
+         15
+         16    DESCRIPTION '
+         17        Chemical Simulation with Metric Units :
+         18        C, bar, kg/hr, kmol/hr, Gcal/hr, cum/hr.
+         19
+         20        Property Method: NRTL
+         21
+         22        Flow basis for input: Mole
+         23
+         24        Stream report composition: Mole flow
+         25        '
+         26
+         27    DATABANKS 'APV120 PURE38' / 'APV120 AQUEOUS' / 'APV120 SOLIDS' &
+         28             / 'APV120 INORGANIC' / 'APESV120 AP-EOS' /  &
+         29            'NISTV120 NIST-TRC' / 'APESV120 ACIDGAS' /  &
+         30            'APV120 ASPENPCD' / 'APV120 BIODIESEL' / 'APV120 COMBUST' &
+         31             / 'APV120 ELECPURE' / 'APV120 EOS-LIT' /  &
+         32            'APV120 ETHYLENE' / 'APV120 HYSYS' / 'APV120 INITIATO' &
+         33             / 'APV120 NRTL-SAC' / 'APV120 PC-SAFT' /  &
+         34            'APV120 POLYMER' / 'APV120 POLYPCSF' / 'APV120 PURE25' &
+         35             / 'APV120 PURE26' / 'APV120 PURE27' / 'APV120 PURE28' &
+         36             / 'APV120 PURE32' / 'APV120 PURE35' / 'APV120 PURE36' &
+         37             / 'APV120 PURE37' / 'APV120 SEGMENT' /  &
+         38            'FACTV120 FACTPCD'
+         39
+         40    PROP-SOURCES 'APV120 PURE38' / 'APV120 AQUEOUS' /  &
+         41            'APV120 SOLIDS' / 'APV120 INORGANIC' / 'APESV120 AP-EOS' &
+         42             / 'NISTV120 NIST-TRC' / 'APESV120 ACIDGAS' /  &
+         43            'APV120 ASPENPCD' / 'APV120 BIODIESEL' / 'APV120 COMBUST' &
+         44             / 'APV120 ELECPURE' / 'APV120 EOS-LIT' /  &
+         45            'APV120 ETHYLENE' / 'APV120 HYSYS' / 'APV120 INITIATO' &
+         46             / 'APV120 NRTL-SAC' / 'APV120 PC-SAFT' /  &
+         47            'APV120 POLYMER' / 'APV120 POLYPCSF' / 'APV120 PURE25' &
+         48             / 'APV120 PURE26' / 'APV120 PURE27' / 'APV120 PURE28' &
+         49             / 'APV120 PURE32' / 'APV120 PURE35' / 'APV120 PURE36' &
+         50             / 'APV120 PURE37' / 'APV120 SEGMENT' /  &
+         51            'FACTV120 FACTPCD'
+         52
+         53    COMPONENTS
+         54        N-HEX-01 C6H14-1
+         55
+         56    PROPERTIES SRK
+         57        PROPERTIES NRTL
+         58
+         59    PROP-SET CAPY2 PRES G H S CP UNITS='bar' 'kJ/kmol'  &
+         60            'kJ/kmol-K' 'kJ/kmol-K' SUBSTREAM=MIXED COMPS=N-HEX-01  &
+         61            PHASE=L V
+         62
+         63    PROP-TABLE PT-1 PROPS
+         64        MOLE-FLOW N-HEX-01 1.
+         65        STATE TEMP=290.
+         66        VARY PRES
+         67        RANGE LIST=1. 25. 50. 75. 100.
+         68        TABULATE PROPERTIES=CAPY2
+         69
+         70    PROP-TABLE PTENV-1 PTENVELOPE
+         71        PROPERTIES SRK FREE-WATER=STEAM-TA SOLU-WATER=3  &
+         72            TRUE-COMPS=YES
+         73        MOLE-FLOW N-HEX-01 1.
+         74        ENVELOPES VFRAC=1
+         75        PARAM
+         76        TABULATE "N-HEXANE" PROPERTIES=CAPY2 LINES=11
+         77
+         78    PROP-TABLE PURE-1 PROPS
+         79        IN-UNITS MET PRESSURE=bar PDROP=atm SHORT-LENGTH=mm
+         80        ANALYSIS ANAL-TYPE=PURE PURE-PROP='G' UNITS='MJ/kmol'  &
+         81            PURE-PHASES= V L
+         82        MOLE-FLOW N-HEX-01 1
+         83        PROPERTIES SRK FREE-WATER=STEAM-TA SOLU-WATER=3  &
+         84            TRUE-COMPS=YES
+         85        VARY TEMP
+         86        RANGE VARVALUE=RANGE LOWER=250. UPPER=600. NPOINT=50
+         87        VARY PRES
+         88        RANGE LIST=20.
+         89        PARAM
+         90    ;
+         91    ;
+         92    ;
+         93    ;
+         94    ;
+ *** INPUT TRANSLATOR MESSAGES ***
+
+  *** THIS RUN USES THE PROPERTIES ENTERPRISE DATABASE ***
+      ASPENDB.ENGR.UDEL.EDU\REMOTESQL.APESV110 : (DATAVERSION - 37.0.0.22)    
+      ASPENDB.ENGR.UDEL.EDU\REMOTESQL.APESV120 : (DATAVERSION - 38.0.0.14)    
+      ASPENDB.ENGR.UDEL.EDU\REMOTESQL.APV110 : (DATAVERSION - 37.0.0.27)      
+      ASPENDB.ENGR.UDEL.EDU\REMOTESQL.APV120 : (DATAVERSION - 38.0.0.20)      
+      ASPENDB.ENGR.UDEL.EDU\REMOTESQL.APV86 : (DATAVERSION - 32.0.0.7)        
+      ASPENDB.ENGR.UDEL.EDU\REMOTESQL.FACTV110 : (DATAVERSION - 37.0.0.11)    
+      ASPENDB.ENGR.UDEL.EDU\REMOTESQL.FACTV120 : (DATAVERSION - 38.0.0.1)     
+      ASPENDB.ENGR.UDEL.EDU\REMOTESQL.FACTV86 : (DATAVERSION - 32.0.0.1)      
+      ASPENDB.ENGR.UDEL.EDU\REMOTESQL.NISTV110 : (DATAVERSION - 37.0.0.27)    
+      ASPENDB.ENGR.UDEL.EDU\REMOTESQL.NISTV120 : (DATAVERSION - 38.0.0.12)    
+      ASPENDB.ENGR.UDEL.EDU\REMOTESQL.NISTV86 : (DATAVERSION - 32.0.0.6)      
+
+  *   WARNING IN THE "PROPERTIES" PARAGRAPH WHICH BEGINS ON LINE 56             
+                                                               (SECPO.4)        
+      FREE-WATER METHOD SHOULD BE STEAMNBS WHEN THE MAIN                        
+      PROPERTY METHOD IS SRK. DEFAULT FREE-WATER METHOD IS STEAM-TA             
+      PLEASE SPECIFY THE RECOMMENDED FREE-WATER METHOD AND RUN AGAIN.           
+
+ PDF updated                                                                      TIME =      1.74
+
+ *** CALCULATION TRACE ***
+
+ CHEG325 HOMEWORK1 QUESTION1                                     
+
+
+ Table Generation begins                                                          Time =      0.02
+
+      BEGIN CALCULATIONS FOR PROP-TABLE PT-1                                      TIME =      0.03
+
+      BEGIN CALCULATIONS FOR PROP-TABLE PTENV-1                                   TIME =      0.03
+
+      BEGIN CALCULATIONS FOR PROP-TABLE PURE-1                                    TIME =      0.03
+
+ Results generated                                                                Time =      0.03

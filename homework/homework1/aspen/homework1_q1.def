@@ -1,0 +1,10 @@
+INPUT: homework1_q1.inm
+MODNAME: apmain
+RUNID: homework1_q1
+NEW_RUNID: homework1_q1
+OLD_RUNID: homework1_q1
+PDF: homework1_q1.appdf
+USERNAME: Kyle Wodehouse
+XMOD: C:\Program Files\AspenTech\Aspen Plus V12.0\Engine\xeq\apmain
+SPONLY:
+DBCONN: _0552uxy.ads
