@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="k.wodehouse">
-<meta name="dcterms.date" content="2025-03-01">
+<meta name="dcterms.date" content="2025-03-06">
 
 <title>SIS 10.1-7</title>
 <style>
@@ -3247,7 +3247,7 @@ window.Quarto = {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">March 1, 2025</p>
+      <p class="date">March 6, 2025</p>
     </div>
   </div>
   
@@ -3260,7 +3260,7 @@ window.Quarto = {
 
 
 <p>I’ll start by bringing in the data given in the question as a dataframe because thats super easy to work with. I grabbed the molecular weight from NIST.</p>
-<div id="cell-2" class="cell" data-execution_count="3">
+<div id="cell-2" class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> scipy.optimize <span class="im">import</span> fsolve</span>
@@ -3270,7 +3270,7 @@ window.Quarto = {
 <span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>components <span class="op">=</span>  <span class="bu">list</span>(df.index)</span>
 <span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>df[<span class="st">&#39;pvap&#39;</span>] <span class="op">*=</span> <span class="fl">1e5</span></span>
 <span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>df</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="3">
+<div class="cell-output cell-output-display" data-execution_count="2">
 <div>
 
 
@@ -3321,7 +3321,7 @@ window.Quarto = {
 <li>if it matches the guess, thats the answer</li>
 <li>otherwise guess another pressure</li>
 </ol>
-<div id="cell-4" class="cell" data-execution_count="4">
+<div id="cell-4" class="cell" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>volume <span class="op">=</span> <span class="fl">30.0</span> <span class="op">/</span> <span class="dv">1000</span> <span class="co"># liters -&gt; m^3</span></span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>T <span class="op">=</span> <span class="fl">298.0</span></span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -3356,22 +3356,22 @@ window.Quarto = {
 <span id="cb2-32"><a href="#cb2-32" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-33"><a href="#cb2-33" aria-hidden="true" tabindex="-1"></a>pressure <span class="op">=</span> fsolve(flash, <span class="fl">1e5</span>, maxfev<span class="op">=</span><span class="dv">99999</span>)[<span class="dv">0</span>]</span>
 <span id="cb2-34"><a href="#cb2-34" aria-hidden="true" tabindex="-1"></a>V <span class="op">=</span> fsolve(get_v, <span class="fl">0.9</span>, (pressure))[<span class="dv">0</span>]</span>
-<span id="cb2-35"><a href="#cb2-35" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f&#39;pressure: </span><span class="sc">{</span>pressure<span class="op">*</span><span class="fl">1e-5</span><span class="sc">:.12f}</span><span class="ss"> bar&#39;</span>)</span>
+<span id="cb2-35"><a href="#cb2-35" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f&#39;pressure: </span><span class="sc">{</span>pressure<span class="op">*</span><span class="fl">1e-5</span><span class="sc">:.4f}</span><span class="ss"> bar&#39;</span>)</span>
 <span id="cb2-36"><a href="#cb2-36" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-37"><a href="#cb2-37" aria-hidden="true" tabindex="-1"></a>pressure_ig <span class="op">=</span> R<span class="op">*</span>T<span class="op">/</span>volume</span>
-<span id="cb2-38"><a href="#cb2-38" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f&#39;P (ideal gas in 30L): </span><span class="sc">{</span>pressure_ig<span class="op">*</span><span class="fl">1e-5</span><span class="sc">:.12f}</span><span class="ss"> bar&#39;</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb2-38"><a href="#cb2-38" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f&#39;P (ideal gas in 30L): </span><span class="sc">{</span>pressure_ig<span class="op">*</span><span class="fl">1e-5</span><span class="sc">:.4f}</span><span class="ss"> bar&#39;</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>pressure: 0.261628453858 bar
-P (ideal gas in 30L): 0.825903286721 bar</code></pre>
+<pre><code>pressure: 0.2616 bar
+P (ideal gas in 30L): 0.8259 bar</code></pre>
 </div>
 <div class="cell-output cell-output-stderr">
-<pre><code>/var/folders/f9/38nkw6517lgf362dv55hy0xc0000gn/T/ipykernel_77102/1522336731.py:13: RuntimeWarning: The iteration is not making good progress, as measured by the 
+<pre><code>/var/folders/f9/38nkw6517lgf362dv55hy0xc0000gn/T/ipykernel_28164/2401709798.py:13: RuntimeWarning: The iteration is not making good progress, as measured by the 
   improvement from the last ten iterations.
   V = fsolve(get_v, 0.5, (Ptotal), maxfev=9999)[0]</code></pre>
 </div>
 </div>
 <p>realistically, the liquid volume is probably negligible. let’s get the compositions now</p>
-<div id="cell-6" class="cell" data-execution_count="5">
+<div id="cell-6" class="cell" data-execution_count="4">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&#39;----- liquid composition -----&#39;</span>)</span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>xis <span class="op">=</span> []</span>
 <span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> component <span class="kw">in</span> components:</span>
@@ -3406,7 +3406,7 @@ n-hexane: 0.743</code></pre>
 <li>we know our calculated pressure should be <span class="math inline">\(\sum x_i P^{\text{vap}}_i\)</span></li>
 <li>our liquid and vapor volumes must add up to 30 liters</li>
 </ul>
-<div id="cell-8" class="cell" data-execution_count="6">
+<div id="cell-8" class="cell" data-execution_count="5">
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>sumy <span class="op">=</span> results[<span class="st">&#39;y&#39;</span>].<span class="bu">sum</span>()</span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>sumx <span class="op">=</span> results[<span class="st">&#39;x&#39;</span>].<span class="bu">sum</span>()</span>
 <span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f&#39;sum y: </span><span class="sc">{</span>sumy<span class="sc">:.4f}</span><span class="ch">\n</span><span class="ss">sum x: </span><span class="sc">{</span>sumx<span class="sc">:.4f}</span><span class="ch">\n</span><span class="ss">&#39;</span>)</span>
@@ -3444,7 +3444,7 @@ volume sum: 30.00</code></pre>
 </div>
 </div>
 <p>boom! they check out.</p>
-<div id="cell-10" class="cell" data-execution_count="7">
+<div id="cell-10" class="cell" data-execution_count="6">
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co"># filler text</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 

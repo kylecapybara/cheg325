@@ -1,0 +1,176 @@
+/Users/kylewodehouse/anaconda3/lib/python3.11/site-packages/albumentations/__init__.py:24: UserWarning: A new version of Albumentations is available: 2.0.5 (you have 1.4.24). Upgrade using: pip install -U albumentations. To disable automatic update checks, set the environment variable NO_ALBUMENTATIONS_UPDATE to 1.
+  check_for_updates()
+/Users/kylewodehouse/anaconda3/lib/python3.11/site-packages/torch/utils/_pytree.py:185: FutureWarning: optree is installed but the version is too old to support PyTorch Dynamo in C++ pytree. C++ pytree support is disabled. Please consider upgrading optree using `python3 -m pip install --upgrade 'optree>=0.13.0'`.
+  warnings.warn(
+/Users/kylewodehouse/anaconda3/lib/python3.11/site-packages/pydantic/_internal/_serializers.py:44: UserWarning: Pydantic serializer warnings:
+  PydanticSerializationUnexpectedValue(Expected `dict[str, any]` - serialized value may not be as expected [input_value=UniformParams(noise_type=... 0.058823529411764705)]), input_type=UniformParams])
+  v = handler(item, index)
+/Users/kylewodehouse/anaconda3/lib/python3.11/site-packages/pydantic/main.py:463: UserWarning: Pydantic serializer warnings:
+  PydanticSerializationUnexpectedValue(Expected `dict[str, any]` - serialized value may not be as expected [input_value=UniformParams(noise_type=... 0.058823529411764705)]), input_type=UniformParams])
+  return self.__pydantic_serializer__.to_python(
+qt.core.plugin.factoryloader: checking directory path "/Users/kylewodehouse/anaconda3/lib/python3.11/site-packages/PyQt5/Qt5/plugins/platforms" ...
+qt.core.plugin.factoryloader: looking at "libqwebgl.dylib"
+qt.core.plugin.loader: Found metadata in lib /Users/kylewodehouse/anaconda3/lib/python3.11/site-packages/PyQt5/Qt5/plugins/platforms/libqwebgl.dylib, metadata=
+{
+    "IID": "org.qt-project.Qt.QPA.QPlatformIntegrationFactoryInterface.5.3",
+    "MetaData": {
+        "Keys": [
+            "webgl"
+        ]
+    },
+    "archlevel": 0,
+    "className": "QWebGLIntegrationPlugin",
+    "debug": false,
+    "version": 331520
+}
+
+
+qt.core.plugin.loader: In /Users/kylewodehouse/anaconda3/lib/python3.11/site-packages/PyQt5/Qt5/plugins/platforms/libqwebgl.dylib:
+  Plugin uses incompatible Qt library (5.15.0) [release]
+qt.core.plugin.factoryloader: "The plugin '/Users/kylewodehouse/anaconda3/lib/python3.11/site-packages/PyQt5/Qt5/plugins/platforms/libqwebgl.dylib' uses incompatible Qt library. (5.15.0) [release]" 
+         not a plugin
+qt.core.plugin.factoryloader: looking at "libqoffscreen.dylib"
+qt.core.plugin.loader: Found metadata in lib /Users/kylewodehouse/anaconda3/lib/python3.11/site-packages/PyQt5/Qt5/plugins/platforms/libqoffscreen.dylib, metadata=
+{
+    "IID": "org.qt-project.Qt.QPA.QPlatformIntegrationFactoryInterface.5.3",
+    "MetaData": {
+        "Keys": [
+            "offscreen"
+        ]
+    },
+    "archlevel": 0,
+    "className": "QOffscreenIntegrationPlugin",
+    "debug": false,
+    "version": 331520
+}
+
+
+qt.core.plugin.loader: In /Users/kylewodehouse/anaconda3/lib/python3.11/site-packages/PyQt5/Qt5/plugins/platforms/libqoffscreen.dylib:
+  Plugin uses incompatible Qt library (5.15.0) [release]
+qt.core.plugin.factoryloader: "The plugin '/Users/kylewodehouse/anaconda3/lib/python3.11/site-packages/PyQt5/Qt5/plugins/platforms/libqoffscreen.dylib' uses incompatible Qt library. (5.15.0) [release]" 
+         not a plugin
+qt.core.plugin.factoryloader: looking at "libqminimal.dylib"
+qt.core.plugin.loader: Found metadata in lib /Users/kylewodehouse/anaconda3/lib/python3.11/site-packages/PyQt5/Qt5/plugins/platforms/libqminimal.dylib, metadata=
+{
+    "IID": "org.qt-project.Qt.QPA.QPlatformIntegrationFactoryInterface.5.3",
+    "MetaData": {
+        "Keys": [
+            "minimal"
+        ]
+    },
+    "archlevel": 0,
+    "className": "QMinimalIntegrationPlugin",
+    "debug": false,
+    "version": 331520
+}
+
+
+qt.core.plugin.loader: In /Users/kylewodehouse/anaconda3/lib/python3.11/site-packages/PyQt5/Qt5/plugins/platforms/libqminimal.dylib:
+  Plugin uses incompatible Qt library (5.15.0) [release]
+qt.core.plugin.factoryloader: "The plugin '/Users/kylewodehouse/anaconda3/lib/python3.11/site-packages/PyQt5/Qt5/plugins/platforms/libqminimal.dylib' uses incompatible Qt library. (5.15.0) [release]" 
+         not a plugin
+qt.core.plugin.factoryloader: looking at "libqcocoa.dylib"
+qt.core.plugin.loader: Found metadata in lib /Users/kylewodehouse/anaconda3/lib/python3.11/site-packages/PyQt5/Qt5/plugins/platforms/libqcocoa.dylib, metadata=
+{
+    "IID": "org.qt-project.Qt.QPA.QPlatformIntegrationFactoryInterface.5.3",
+    "MetaData": {
+        "Keys": [
+            "cocoa"
+        ]
+    },
+    "archlevel": 0,
+    "className": "QCocoaIntegrationPlugin",
+    "debug": false,
+    "version": 331520
+}
+
+
+qt.core.plugin.loader: In /Users/kylewodehouse/anaconda3/lib/python3.11/site-packages/PyQt5/Qt5/plugins/platforms/libqcocoa.dylib:
+  Plugin uses incompatible Qt library (5.15.0) [release]
+qt.core.plugin.factoryloader: "The plugin '/Users/kylewodehouse/anaconda3/lib/python3.11/site-packages/PyQt5/Qt5/plugins/platforms/libqcocoa.dylib' uses incompatible Qt library. (5.15.0) [release]" 
+         not a plugin
+qt.core.plugin.factoryloader: checking directory path "/Users/kylewodehouse/anaconda3/plugins/platforms" ...
+qt.core.plugin.factoryloader: looking at "libqwebgl.dylib"
+qt.core.plugin.loader: Found metadata in lib /Users/kylewodehouse/anaconda3/plugins/platforms/libqwebgl.dylib, metadata=
+{
+    "IID": "org.qt-project.Qt.QPA.QPlatformIntegrationFactoryInterface.5.3",
+    "MetaData": {
+        "Keys": [
+            "webgl"
+        ]
+    },
+    "archlevel": 0,
+    "className": "QWebGLIntegrationPlugin",
+    "debug": false,
+    "version": 331520
+}
+
+
+qt.core.plugin.loader: In /Users/kylewodehouse/anaconda3/plugins/platforms/libqwebgl.dylib:
+  Plugin uses incompatible Qt library (5.15.0) [release]
+qt.core.plugin.factoryloader: "The plugin '/Users/kylewodehouse/anaconda3/plugins/platforms/libqwebgl.dylib' uses incompatible Qt library. (5.15.0) [release]" 
+         not a plugin
+qt.core.plugin.factoryloader: looking at "libqoffscreen.dylib"
+qt.core.plugin.loader: Found metadata in lib /Users/kylewodehouse/anaconda3/plugins/platforms/libqoffscreen.dylib, metadata=
+{
+    "IID": "org.qt-project.Qt.QPA.QPlatformIntegrationFactoryInterface.5.3",
+    "MetaData": {
+        "Keys": [
+            "offscreen"
+        ]
+    },
+    "archlevel": 0,
+    "className": "QOffscreenIntegrationPlugin",
+    "debug": false,
+    "version": 331520
+}
+
+
+qt.core.plugin.loader: In /Users/kylewodehouse/anaconda3/plugins/platforms/libqoffscreen.dylib:
+  Plugin uses incompatible Qt library (5.15.0) [release]
+qt.core.plugin.factoryloader: "The plugin '/Users/kylewodehouse/anaconda3/plugins/platforms/libqoffscreen.dylib' uses incompatible Qt library. (5.15.0) [release]" 
+         not a plugin
+qt.core.plugin.factoryloader: looking at "libqminimal.dylib"
+qt.core.plugin.loader: Found metadata in lib /Users/kylewodehouse/anaconda3/plugins/platforms/libqminimal.dylib, metadata=
+{
+    "IID": "org.qt-project.Qt.QPA.QPlatformIntegrationFactoryInterface.5.3",
+    "MetaData": {
+        "Keys": [
+            "minimal"
+        ]
+    },
+    "archlevel": 0,
+    "className": "QMinimalIntegrationPlugin",
+    "debug": false,
+    "version": 331520
+}
+
+
+qt.core.plugin.loader: In /Users/kylewodehouse/anaconda3/plugins/platforms/libqminimal.dylib:
+  Plugin uses incompatible Qt library (5.15.0) [release]
+qt.core.plugin.factoryloader: "The plugin '/Users/kylewodehouse/anaconda3/plugins/platforms/libqminimal.dylib' uses incompatible Qt library. (5.15.0) [release]" 
+         not a plugin
+qt.core.plugin.factoryloader: looking at "libqcocoa.dylib"
+qt.core.plugin.loader: Found metadata in lib /Users/kylewodehouse/anaconda3/plugins/platforms/libqcocoa.dylib, metadata=
+{
+    "IID": "org.qt-project.Qt.QPA.QPlatformIntegrationFactoryInterface.5.3",
+    "MetaData": {
+        "Keys": [
+            "cocoa"
+        ]
+    },
+    "archlevel": 0,
+    "className": "QCocoaIntegrationPlugin",
+    "debug": false,
+    "version": 331520
+}
+
+
+qt.core.plugin.loader: In /Users/kylewodehouse/anaconda3/plugins/platforms/libqcocoa.dylib:
+  Plugin uses incompatible Qt library (5.15.0) [release]
+qt.core.plugin.factoryloader: "The plugin '/Users/kylewodehouse/anaconda3/plugins/platforms/libqcocoa.dylib' uses incompatible Qt library. (5.15.0) [release]" 
+         not a plugin
+qt.core.plugin.factoryloader: checking directory path "/Users/kylewodehouse/anaconda3/bin/platforms" ...
+qt.qpa.plugin: Could not find the Qt platform plugin "cocoa" in "/Users/kylewodehouse/anaconda3/lib/python3.11/site-packages/PyQt5/Qt5/plugins/platforms"
+This application failed to start because no Qt platform plugin could be initialized. Reinstalling the application may fix this problem.
+

@@ -1,0 +1,114 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{multirow}
+
+\begin{document}
+
+\begin{table}[h]
+\centering
+\begin{tabular}{llll}
+\toprule
+\textbf{State} & \textbf{Standard State} & \textbf{General} & \textbf{Simplification for Low and Moderate Pressures} \\
+\midrule
+Pure gas & 
+\begin{tabular}{@{}l@{}}
+Pure gas \\
+$G^\circ_i = G^V_i(T, P = 1 \text{ bar})$
+\end{tabular} &
+$a_i = \dfrac{f^V_i(T, P)}{f^V_i(T, P = 1 \text{ bar})} = \dfrac{P(f/P)}{1 \text{ bar}}$ &
+$a_i = \dfrac{P}{1 \text{ bar}}$ \\
+\midrule
+Species in a gaseous mixture & 
+\begin{tabular}{@{}l@{}}
+Pure gas\footnotemark[2] \\
+$G^\circ_i = G^V_i(T, P = 1 \text{ bar})$
+\end{tabular} &
+\begin{tabular}{@{}l@{}}
+$a_i = \dfrac{f^V_i(T, P, y)}{f^V_i(T, P = 1 \text{ bar})} = \dfrac{y_iP(f_i/y_iP)}{1 \text{ bar}}$ \\
+$= \dfrac{P_i(f_i/y_iP)}{1 \text{ bar}} = \dfrac{P_i\phi_i(T, P, y)}{1 \text{ bar}}$
+\end{tabular} &
+$a_i = \dfrac{y_iP}{1 \text{ bar}} = \dfrac{P_i}{1 \text{ bar}}$ \\
+\midrule
+Pure liquid\footnotemark[3] & 
+\begin{tabular}{@{}l@{}}
+Pure liquid \\
+$G^\circ_i = G^L_i(T, P = 1 \text{ bar})$
+\end{tabular} &
+\begin{tabular}{@{}l@{}}
+$a_i = \dfrac{f^L_i(T, P)}{f^L_i(T, P = 1 \text{ bar})} = \dfrac{P^{\text{vap}}(T)(f/P)^{\text{sat}} \exp\left\{\dfrac{V^L}{RT}(P - P^{\text{vap}})\right\}}{P^{\text{vap}}(T)(f/P)^{\text{sat}}}$ \\
+$= \exp\left\{\dfrac{V^L}{RT}(P - P^{\text{vap}})\right\}$
+\end{tabular} &
+$a_i = 1$ \\
+\midrule
+Species in a liquid mixture\footnotemark[3] & 
+\begin{tabular}{@{}l@{}}
+Pure liquid\footnotemark[2] \\
+$G^\circ_i = G^L_i(T, P = 1 \text{ bar})$
+\end{tabular} &
+$a_i = \dfrac{x_i\gamma_iP^{\text{vap}}(f/P)^{\text{sat}} \exp\left\{\dfrac{V_i}{RT}(P - P^{\text{vap}})\right\}}{P^{\text{vap}}(f/P)^{\text{sat}}} = x_i\gamma_i \exp\left\{\dfrac{V_i}{RT}(P - P^{\text{vap}})\right\}$ &
+$a_i = x_i\gamma_i$ \\
+& & & ($\gamma_i \to 1$ as $x_i \to 1$) \\
+\midrule
+Species in a 1 molal ideal solution & 
+\begin{tabular}{@{}l@{}}
+$G^\circ_i = G_i(T, P = 1 \text{ bar}, M_i = 1)$ \\
+(see Eq. 7.8-15)
+\end{tabular} &
+\begin{tabular}{@{}l@{}}
+$a_i = \dfrac{M_iH_i(T, P = 1 \text{ bar})\gamma^\square_i}{(M_i = 1)H_i(T, P = 1 \text{ bar})} \exp\left\{\dfrac{V^\infty_i}{RT}(P - 1 \text{ bar})\right\}$ \\
+$= \dfrac{M_i\gamma^\square_i}{(M_i = 1)} \exp\left\{\dfrac{V^\infty_i}{RT}(P - 1 \text{ bar})\right\}}$
+\end{tabular} &
+$a_i = M_i\gamma^\square_i / (M_i = 1)$ \\
+& & & ($\gamma^\square_i \to 1$ as $M_i \to 0$) \\
+\midrule
+Species as a pure liquid with infinite-dilution properties & 
+\begin{tabular}{@{}l@{}}
+$G^\circ_i = G^*_i(T, P = 1 \text{ bar}, x_i = 1)$
+\end{tabular} &
+\begin{tabular}{@{}l@{}}
+$a_i = \dfrac{x_iH_i(T, P = 1 \text{ bar})\gamma^*_i}{H_i(T, P = 1 \text{ bar})} \exp\left\{\dfrac{V^\infty_i}{RT}(P - 1 \text{ bar})\right\}$ \\
+$= x_i\gamma^*_i \exp\left\{\dfrac{V^\infty_i}{RT}(P - 1 \text{ bar})\right\}$
+\end{tabular} &
+$a_i = x_i\gamma^*_i$ \\
+& & & ($\gamma^*_i \to 1$ as $x_i \to 0$) \\
+\midrule
+Pure solid & 
+\begin{tabular}{@{}l@{}}
+Pure solid \\
+$G^\circ_i = G^S_i(T, P = 1 \text{ bar})$
+\end{tabular} &
+\begin{tabular}{@{}l@{}}
+$a_i = \dfrac{f^S_i(T, P)}{f^S_i(T, P = 1 \text{ bar})} = \dfrac{P^{\text{sat}}(T)(f/P)^{\text{sat}} \exp\left\{\dfrac{V^S}{RT}(P - P^{\text{sat}})\right\}}{P^{\text{sat}}(T)(f/P)^{\text{sat}}}$ \\
+$= \exp\left\{\dfrac{V^S}{RT}(P - P^{\text{sat}})\right\}$
+\end{tabular} &
+$a_i = 1$ \\
+\midrule
+Species in a solid mixture & 
+\begin{tabular}{@{}l@{}}
+Pure solid \\
+$G^\circ_i = G^S_i(T, P = 1 \text{ bar})$
+\end{tabular} &
+$a_i = \exp\left\{\dfrac{V^S}{RT}(P - 1 \text{ bar})\right\}$ as above &
+$a_i = 1$ \\
+\midrule
+Dissolved electrolyte in solution & 
+\begin{tabular}{@{}l@{}}
+Dissolved electrolyte, each ion at unit molality in an ideal solution \\
+$G^\circ_i = \nu_+G_{A+}(T, P = 1 \text{ bar}, M_{A+} = 1)$ \\
+$+ \nu_-G_{B-}(T, P = 1 \text{ bar}, M_{B-} = 1)$ \\
+\end{tabular} &
+$a_i = \dfrac{M^{\nu_+}_{A+}M^{\nu_-}_{B-}(\gamma_\pm)^\nu}{(M_\pm = 1)^\nu} = \dfrac{(M_\pm\gamma_\pm)^\nu}{(M_\pm = 1)^\nu}$ &
+\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\footnotetext[1]{In this table we have neglected the Poynting correction to the pure component standard states.}
+\footnotetext[2]{If a gaseous or liquid mixture are describable by an equation of state, we have
+$a_i = \dfrac{f_i(T, P, x)}{f_i(T, P = 1 \text{ bar})} = \dfrac{x_iP \phi_i(T, P, x)}{(1 \text{ bar})\phi_i(T, P = 1 \text{ bar})}$
+where the fugacity coefficients $\phi_i(T, P, x)$ and $\phi_i(T, P = 1 \text{ bar})$ are computed from the equation of state.}
+\footnotetext[3]{If a liquid or liquid mixture is describable by an equation of state, the same equations as for gases or gaseous mixtures are used.}
+
+\end{document}

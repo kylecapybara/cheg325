@@ -1,0 +1,95 @@
+Units	OUT2	
+Description			
+From		DECANT	
+To			
+Stream Class		CONVEN	
+Maximum Relative Error			
+Cost Flow	$/hr		
+MIXED Substream			
+Phase		Liquid Phase	
+Temperature	C	25	
+Pressure	bar	1	
+Molar Vapor Fraction		0	
+Molar Liquid Fraction		1	
+Molar Solid Fraction		0	
+Mass Vapor Fraction		0	
+Mass Liquid Fraction		1	
+Mass Solid Fraction		0	
+Molar Enthalpy	kcal/mol	-68.2359376317229	
+Mass Enthalpy	kcal/kg	-3772.28935068671	
+Molar Entropy	cal/mol-K	-39.0369541566086	
+Mass Entropy	cal/gm-K	-2.15808108687524	
+Molar Density	mol/cc	0.0548400422563956	
+Mass Density	kg/cum	991.986922330668	
+Enthalpy Flow	Gcal/hr	-0.0208355027109648	
+Average MW		18.08873373388	
+Mole Flows	kmol/hr	0.305345004906599	
+WATER	kmol/hr	0.304309686607238	
+METHANOL	kmol/hr	0.000954794892210494	
+1-OCT-01	kmol/hr	8.05234071506485E-05	
+Mole Fractions			
+WATER		0.9966093491535	
+METHANOL		0.00312693797791961	
+1-OCT-01		0.000263712868580508	
+Mass Flows	kg/hr	5.52330449072575	
+WATER	kg/hr	5.48222421094164	
+METHANOL	kg/hr	0.0305936907033914	
+1-OCT-01	kg/hr	0.0104865890807192	
+Mass Fractions			
+WATER		0.992562372787325	
+METHANOL		0.00553901939586378	
+1-OCT-01		0.001898607816811	
+Volume Flow	cum/hr	0.00556792067152335	
+Liquid Phase			
+Molar Enthalpy	kcal/mol	-68.2359376317229	
+Mass Enthalpy	kcal/kg	-3772.28935068671	
+Molar Entropy	cal/mol-K	-39.0369541566086	
+Mass Entropy	cal/gm-K	-2.15808108687524	
+Molar Density	mol/cc	0.0548400422563956	
+Mass Density	kg/cum	991.986922330668	
+Enthalpy Flow	Gcal/hr	-0.0208355027109648	
+Average MW		18.08873373388	
+Mole Flows	kmol/hr	0.305345004906599	
+WATER	kmol/hr	0.304309686607238	
+METHANOL	kmol/hr	0.000954794892210493	
+1-OCT-01	kmol/hr	8.05234071506485E-05	
+Mole Fractions			
+WATER		0.9966093491535	
+METHANOL		0.00312693797791961	
+1-OCT-01		0.000263712868580508	
+Mass Flows	kg/hr	5.52330449072575	
+WATER	kg/hr	5.48222421094164	
+METHANOL	kg/hr	0.0305936907033914	
+1-OCT-01	kg/hr	0.0104865890807193	
+Mass Fractions			
+WATER		0.992562372787325	
+METHANOL		0.00553901939586378	
+1-OCT-01		0.00189860781681101	
+Volume Flow	cum/hr	0.00556792067152335	
+Liquid2 Phase			
+Molar Enthalpy	kcal/mol	-68.2359376317229	
+Mass Enthalpy	kcal/kg	-3772.28935068671	
+Molar Entropy	cal/mol-K	-39.0369541566086	
+Mass Entropy	cal/gm-K	-2.15808108687524	
+Molar Density	mol/cc	0.0548400422563956	
+Mass Density	kg/cum	991.986922330668	
+Enthalpy Flow	Gcal/hr	-0.0208355027109648	
+Average MW		18.08873373388	
+Mole Flows	kmol/hr	0.305345004906599	
+WATER	kmol/hr	0.304309686607238	
+METHANOL	kmol/hr	0.000954794892210493	
+1-OCT-01	kmol/hr	8.05234071506485E-05	
+Mole Fractions			
+WATER		0.9966093491535	
+METHANOL		0.00312693797791961	
+1-OCT-01		0.000263712868580508	
+Mass Flows	kg/hr	5.52330449072575	
+WATER	kg/hr	5.48222421094164	
+METHANOL	kg/hr	0.0305936907033914	
+1-OCT-01	kg/hr	0.0104865890807193	
+Mass Fractions			
+WATER		0.992562372787325	
+METHANOL		0.00553901939586378	
+1-OCT-01		0.00189860781681101	
+Volume Flow	cum/hr	0.00556792067152335	
+<add properties>			

@@ -1,0 +1,285 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{geometry}
+
+\geometry{
+    letterpaper,
+    left=0.5in,
+    right=0.5in,
+    textwidth=8in
+}
+
+\title{typed up answers for question 3}
+\author{kyle wodehouse}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\section{a}
+\Large
+\[
+x_1^{\text{L}} =
+\frac{
+\left(1 - \gamma_2^{\text{L}}(x^{\text{L}}) 
+\exp\left[ \frac{\Delta_{\text{fus}} H_2 (T_{m,2})}{RT} \left( 1 - \frac{T}{T_{m,2}} \right) \right] \right)
+}
+{
+\gamma_1^{\text{L}}(x^{\text{L}}) 
+\exp\left[ \frac{\Delta_{\text{fus}} H_1 (T_{m,1})}{RT} \left( 1 - \frac{T}{T_{m,1}} \right) \right]
+- \gamma_2^{\text{L}}(x^{\text{L}})
+\exp\left[ \frac{\Delta_{\text{fus}} H_2 (T_{m,2})}{RT} \left( 1 - \frac{T}{T_{m,2}} \right) \right]
+}
+\]
+
+\[
+x_1^{\text{S}} =
+\frac{
+\left(1 - \frac{1}{\gamma_2^{\text{L}}(x^{\text{L}})} 
+\exp\left[ -\frac{\Delta_{\text{fus}} H_2 (T_{m,2})}{RT} \left( 1 - \frac{T}{T_{m,2}} \right) \right] \right)
+}
+{
+\frac{1}{\gamma_1^{\text{L}}(x^{\text{L}})} 
+\exp\left[ -\frac{\Delta_{\text{fus}} H_1 (T_{m,1})}{RT} \left( 1 - \frac{T}{T_{m,1}} \right) \right]
+- \frac{1}{\gamma_2^{\text{L}}(x^{\text{L}})} 
+\exp\left[ -\frac{\Delta_{\text{fus}} H_2 (T_{m,2})}{RT} \left( 1 - \frac{T}{T_{m,2}} \right) \right]
+}
+\]
+
+and now for regular solution theory
+
+\[ \ln \gamma_1 = \frac{V_1^L (\delta_1 - \delta_2)^2}{RT} \Phi_2^2 = \frac{\Omega}{RT} x_2^2 \tag{1}\]
+
+just imagine that $\Omega$ is whatever $\Omega$ needs to be to make that equation true.
+
+\large
+
+\[
+x_1^{\text{L}} =
+\frac{
+\left(1 - \exp \left[
+\frac{1}{RT} \left(
+\Omega x_1^2 + \Delta_{\text{fus}} H_2 (T_{m,2}) \left(1 - \frac{T}{T_{m,2}} \right)
+\right)
+\right] \right)
+}
+{
+\exp \left[
+\frac{1}{RT} \left(
+\Omega x_2^2 + \Delta_{\text{fus}} H_1 (T_{m,1}) \left(1 - \frac{T}{T_{m,1}} \right)
+\right)
+\right]
+-
+\exp \left[
+\frac{1}{RT} \left(
+\Omega x_1^2 + \Delta_{\text{fus}} H_2 (T_{m,2}) \left(1 - \frac{T}{T_{m,2}} \right)
+\right)
+\right]
+}
+\]
+
+\[
+x_1^{\text{S}} =
+\frac{
+\left(1 - \exp \left[
+\frac{1}{RT} \left(
+-\Omega x_1^2 - \Delta_{\text{fus}} H_2 (T_{m,2}) \left(1 - \frac{T}{T_{m,2}} \right)
+\right)
+\right] \right)
+}
+{
+\exp \left[
+\frac{1}{RT} \left(
+-\Omega x_2^2 - \Delta_{\text{fus}} H_1 (T_{m,1}) \left(1 - \frac{T}{T_{m,1}} \right)
+\right)
+\right]
+-
+\exp \left[
+\frac{1}{RT} \left(
+-\Omega x_1^2 - \Delta_{\text{fus}} H_2 (T_{m,2}) \left(1 - \frac{T}{T_{m,2}} \right)
+\right)
+\right]
+}
+\]
+
+here are the replacements
+
+\[
+\gamma_2^{\text{L}}(x^{\text{L}}) = \exp \left( \frac{\Omega}{RT} x_1^2 \right) \hspace{3em} \gamma_1^{\text{L}}(x^{\text{L}}) = \exp \left( \frac{\Omega}{RT} x_2^2 \right)
+\]
+
+
+
+\section{b}
+
+\[
+x_1^{\text{L}} =
+\frac{
+\left(1 - \frac{1}{\gamma_2^{\text{S}}(x^{\text{S}})} 
+\exp\left[ \frac{\Delta_{\text{fus}} H_2 (T_{m,2})}{RT} \left( 1 - \frac{T}{T_{m,2}} \right) \right] \right)
+}
+{
+\frac{1}{\gamma_1^{\text{S}}(x^{\text{S}})} 
+\exp\left[ \frac{\Delta_{\text{fus}} H_1 (T_{m,1})}{RT} \left( 1 - \frac{T}{T_{m,1}} \right) \right]
+- \frac{1}{\gamma_2^{\text{S}}(x^{\text{S}})} 
+\exp\left[ \frac{\Delta_{\text{fus}} H_2 (T_{m,2})}{RT} \left( 1 - \frac{T}{T_{m,2}} \right) \right]
+}
+\]
+
+\[
+x_1^{\text{S}} =
+\frac{
+\left(1 - \gamma_2^{\text{S}}(x^{\text{S}})
+\exp\left[ -\frac{\Delta_{\text{fus}} H_2 (T_{m,2})}{RT} \left( 1 - \frac{T}{T_{m,2}} \right) \right] \right)
+}
+{
+\gamma_1^{\text{S}}(x^{\text{S}})
+\exp\left[ -\frac{\Delta_{\text{fus}} H_1 (T_{m,1})}{RT} \left( 1 - \frac{T}{T_{m,1}} \right) \right]
+- \gamma_2^{\text{S}}(x^{\text{S}})
+\exp\left[ -\frac{\Delta_{\text{fus}} H_2 (T_{m,2})}{RT} \left( 1 - \frac{T}{T_{m,2}} \right) \right]
+}
+\]
+
+and now subbing in
+
+\large
+
+
+\[
+x_1^{\text{L}} =
+\frac{
+\left(1 - \exp \left[
+\frac{1}{RT} \left(
+-\Omega x_1^2 + \Delta_{\text{fus}} H_2 (T_{m,2}) \left(1 - \frac{T}{T_{m,2}} \right)
+\right)
+\right] \right)
+}
+{
+\exp \left[
+\frac{1}{RT} \left(
+-\Omega x_2^2 + \Delta_{\text{fus}} H_1 (T_{m,1}) \left(1 - \frac{T}{T_{m,1}} \right)
+\right)
+\right]
+-
+\exp \left[
+\frac{1}{RT} \left(
+-\Omega x_1^2 + \Delta_{\text{fus}} H_2 (T_{m,2}) \left(1 - \frac{T}{T_{m,2}} \right)
+\right)
+\right]
+}
+\]
+
+\[
+x_1^{\text{S}} =
+\frac{
+\left(1 - \exp \left[
+\frac{1}{RT} \left(
+\Omega x_1^2 - \Delta_{\text{fus}} H_2 (T_{m,2}) \left(1 - \frac{T}{T_{m,2}} \right)
+\right)
+\right] \right)
+}
+{
+\exp \left[
+\frac{1}{RT} \left(
+\Omega x_2^2 - \Delta_{\text{fus}} H_1 (T_{m,1}) \left(1 - \frac{T}{T_{m,1}} \right)
+\right)
+\right]
+-
+\exp \left[
+\frac{1}{RT} \left(
+\Omega x_1^2 - \Delta_{\text{fus}} H_2 (T_{m,2}) \left(1 - \frac{T}{T_{m,2}} \right)
+\right)
+\right]
+}
+\]
+
+
+and for readability here is what was replaced
+
+\[ \gamma_1^{\text{S}}(x^{\text{S}}) = \exp \left( \frac{\Omega}{RT} x_2^2 \right) \hspace{3em} \gamma_2^{\text{S}}(x^{\text{S}}) = \exp \left( \frac{\Omega}{RT} x_1^2 \right) \]
+
+
+\section{c}
+\Large
+
+\[
+x_1^{\text{L}} =
+\frac{
+\left(1 - \frac{\gamma_2^{\text{L}}(x^{\text{L}})}{\gamma_2^{\text{S}}(x^{\text{S}})} 
+\exp\left[ \frac{\Delta_{\text{fus}} H_2 (T_{m,2})}{RT} \left( 1 - \frac{T}{T_{m,2}} \right) \right] \right)
+}
+{
+\frac{\gamma_1^{\text{L}}(x^{\text{L}})}{\gamma_1^{\text{S}}(x^{\text{S}})} 
+\exp\left[ \frac{\Delta_{\text{fus}} H_1 (T_{m,1})}{RT} \left( 1 - \frac{T}{T_{m,1}} \right) \right]
+- \frac{\gamma_2^{\text{L}}(x^{\text{L}})}{\gamma_2^{\text{S}}(x^{\text{S}})} 
+\exp\left[ \frac{\Delta_{\text{fus}} H_2 (T_{m,2})}{RT} \left( 1 - \frac{T}{T_{m,2}} \right) \right]
+}
+\]
+
+\[
+x_1^{\text{S}} =
+\frac{
+\left(1 - \frac{\gamma_2^{\text{S}}(x^{\text{S}})}{\gamma_2^{\text{L}}(x^{\text{L}})} 
+\exp\left[ -\frac{\Delta_{\text{fus}} H_2 (T_{m,2})}{RT} \left( 1 - \frac{T}{T_{m,2}} \right) \right] \right)
+}
+{
+\frac{\gamma_1^{\text{S}}(x^{\text{S}})}{\gamma_1^{\text{L}}(x^{\text{L}})} 
+\exp\left[ -\frac{\Delta_{\text{fus}} H_1 (T_{m,1})}{RT} \left( 1 - \frac{T}{T_{m,1}} \right) \right]
+- \frac{\gamma_2^{\text{S}}(x^{\text{S}})}{\gamma_2^{\text{L}}(x^{\text{L}})} 
+\exp\left[ -\frac{\Delta_{\text{fus}} H_2 (T_{m,2})}{RT} \left( 1 - \frac{T}{T_{m,2}} \right) \right]
+}
+\]
+
+suprise suprise we`re making the same substitutions
+
+\[
+\gamma_2^{\text{L}}(x^{\text{L}}) = \exp \left( \frac{\Omega_L}{RT} x_1^2 \right) \hspace{3em} \gamma_1^{\text{L}}(x^{\text{L}}) = \exp \left( \frac{\Omega_L}{RT} x_2^2 \right)
+\]
+
+\[ \gamma_1^{\text{S}}(x^{\text{S}}) = \exp \left( \frac{\Omega_S}{RT} x_2^2 \right) \hspace{3em} \gamma_2^{\text{S}}(x^{\text{S}}) = \exp \left( \frac{\Omega_S}{RT} x_1^2 \right) \]
+
+
+\[
+x_1^{\text{L}} =
+\frac{
+\left(1 - 
+\exp\left[ 
+\frac{\Omega_L x_1^2 - \Omega_S x_1^2 + \Delta_{\text{fus}} H_2 (T_{m,2}) \left( 1 - \frac{T}{T_{m,2}} \right)}{RT}
+\right] 
+\right)
+}
+{
+\exp\left[ 
+\frac{\Omega_L x_2^2 - \Omega_S x_2^2 + \Delta_{\text{fus}} H_1 (T_{m,1}) \left( 1 - \frac{T}{T_{m,1}} \right)}{RT}
+\right]
+- 
+\exp\left[ 
+\frac{\Omega_L x_1^2 - \Omega_S x_1^2 + \Delta_{\text{fus}} H_2 (T_{m,2}) \left( 1 - \frac{T}{T_{m,2}} \right)}{RT}
+\right]
+}
+\]
+
+\[
+x_1^{\text{S}} =
+\frac{
+\left(1 - 
+\exp\left[ 
+\frac{\Omega_S x_1^2 - \Omega_L x_1^2 - \Delta_{\text{fus}} H_2 (T_{m,2}) \left( 1 - \frac{T}{T_{m,2}} \right)}{RT}
+\right]
+\right)
+}
+{
+\exp\left[ 
+\frac{\Omega_S x_2^2 - \Omega_L x_2^2 - \Delta_{\text{fus}} H_1 (T_{m,1}) \left( 1 - \frac{T}{T_{m,1}} \right)}{RT}
+\right]
+- 
+\exp\left[ 
+\frac{\Omega_S x_1^2 - \Omega_L x_1^2 - \Delta_{\text{fus}} H_2 (T_{m,2}) \left( 1 - \frac{T}{T_{m,2}} \right)}{RT}
+\right]
+}
+\]
+
+
+\end{document}

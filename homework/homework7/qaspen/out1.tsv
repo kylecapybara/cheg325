@@ -1,0 +1,69 @@
+Units	OUT1	
+Description			
+From		DECANT	
+To			
+Stream Class		CONVEN	
+Maximum Relative Error			
+Cost Flow	$/hr		
+MIXED Substream			
+Phase		Liquid Phase	
+Temperature	C	25	
+Pressure	bar	1	
+Molar Vapor Fraction		0	
+Molar Liquid Fraction		1	
+Molar Solid Fraction		0	
+Mass Vapor Fraction		0	
+Mass Liquid Fraction		1	
+Mass Solid Fraction		0	
+Molar Enthalpy	kcal/mol	-92.5404781688085	
+Mass Enthalpy	kcal/kg	-946.157599881857	
+Molar Entropy	cal/mol-K	-176.068065062329	
+Mass Entropy	cal/gm-K	-1.80016508615108	
+Molar Density	mol/cc	0.00865174957778878	
+Mass Density	kg/cum	846.198395516067	
+Enthalpy Flow	Gcal/hr	-0.065209110189983	
+Average MW		97.8066214131384	
+Mole Flows	kmol/hr	0.704654995093401	
+WATER	kmol/hr	0.195690248258181	
+METHANOL	kmol/hr	0.00904520598749518	
+1-OCT-01	kmol/hr	0.499919540847725	
+Mole Fractions			
+WATER		0.277710723149337	
+METHANOL		0.0128363611277548	
+1-OCT-01		0.709452915722908	
+Mass Flows	kg/hr	68.9199243319775	
+WATER	kg/hr	3.52541461564066	
+METHANOL	kg/hr	0.28982793748428	
+1-OCT-01	kg/hr	65.1046817788525	
+Mass Fractions			
+WATER		0.0511523285872927	
+METHANOL		0.00420528519573266	
+1-OCT-01		0.944642386216975	
+Volume Flow	cum/hr	0.0814465315665665	
+Liquid Phase			
+Molar Enthalpy	kcal/mol	-92.5404781688085	
+Mass Enthalpy	kcal/kg	-946.157599881857	
+Molar Entropy	cal/mol-K	-176.068065062329	
+Mass Entropy	cal/gm-K	-1.80016508615108	
+Molar Density	mol/cc	0.00865174957778878	
+Mass Density	kg/cum	846.198395516067	
+Enthalpy Flow	Gcal/hr	-0.065209110189983	
+Average MW		97.8066214131384	
+Mole Flows	kmol/hr	0.704654995093404	
+WATER	kmol/hr	0.195690248258182	
+METHANOL	kmol/hr	0.00904520598749522	
+1-OCT-01	kmol/hr	0.499919540847727	
+Mole Fractions			
+WATER		0.277710723149337	
+METHANOL		0.0128363611277548	
+1-OCT-01		0.709452915722908	
+Mass Flows	kg/hr	68.9199243319775	
+WATER	kg/hr	3.52541461564066	
+METHANOL	kg/hr	0.28982793748428	
+1-OCT-01	kg/hr	65.1046817788525	
+Mass Fractions			
+WATER		0.0511523285872927	
+METHANOL		0.00420528519573266	
+1-OCT-01		0.944642386216975	
+Volume Flow	cum/hr	0.0814465315665665	
+<add properties>			

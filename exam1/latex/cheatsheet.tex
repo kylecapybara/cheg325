@@ -1,0 +1,305 @@
+\documentclass{article}
+
+\input{preamble}
+\usepackage{tikz-3dplot}
+\usepackage{booktabs}
+\usepackage{titling}
+\usepackage{fancyhdr}
+\usetikzlibrary{patterns}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+
+\usepackage{tcolorbox}
+\usepackage[export]{adjustbox}
+\usepackage{tikz}
+
+\tcbset{colback=blue!7!white}
+\tcbsetforeverylayer{colframe=blue!75!black}
+
+
+\pretitle{\vspace{-4em}\begin{flushleft}\LARGE} % Adjust the size and alignment
+    \posttitle{\end{flushleft}}
+    \preauthor{\begin{flushleft}\large} % Adjust the size and alignment
+    \postauthor{\hspace{2em} \large \thedate\end{flushleft}} % Place author and date on the same line
+    \predate{} % Remove the default date formatting
+    \postdate{} % Remove the default date formatting
+
+\pagestyle{fancy}
+\fancyhf{} % Clear all header and footer fields
+\fancyfoot[R]{\thepage} % Right-align the page number in the footer
+\renewcommand{\headrulewidth}{0pt} % Remove the header rule
+\renewcommand{\footrulewidth}{0pt} % Remove the footer rule
+\setlength{\fboxrule}{1pt}
+
+\geometry{
+    top=1.2cm,    % Top margin
+    bottom=3cm, % Bottom margin
+    left=1.0cm, % Left margin
+    right=1.0cm % Right margin
+}
+\title{\bfseries CHEG325 E1 Cheatsheets}
+\author{Kyle Wodehouse}
+\date{}
+
+\begin{document}
+\maketitle
+
+\begin{minipage}[t]{0.5\textwidth}
+     \subsection*{fundamental relations}
+        pure components
+        \[
+        dU = TdS - PdV + \underline{G} dN
+        \]
+        \[
+        dH = T dS + V dP + \underline{G} dN
+        \]
+        \[
+        dA = -P dV - S dT + \underline{G} dN
+        \]
+        \[
+        dG = V dP - S dT + \underline{G} dN
+        \]
+        mixtures 
+        \[
+        dU = T dS - P dV + \sum^C_{i=1} {\mu}_{i} dN_{i}
+        \]
+    \subsection*{partial def of variables}
+
+    \begin{align*}
+    \underline{G} &= \left(\frac{\partial U}{\partial N}\right)_{S,V} = \left(\frac{\partial H}{\partial N}\right)_{P,S} = \left(\frac{\partial A}{\partial N}\right)_{T,V} \\[6pt]
+                 &= \left(\frac{\partial G}{\partial N}\right)_{T,P} = -T\left(\frac{\partial S}{\partial N}\right)_{U,V}
+    \end{align*}
+    \begin{align*}
+    \bar{G}_{i}  &= \left(\frac{ \partial U }{ \partial N_{i} } \right)_{S,V,N_{j\neq i}}
+                  = \left(\frac{ \partial A }{ \partial N_{i} } \right)_{T,V,N_{j \neq i}} \\
+                 &= \left(\frac{ \partial H }{ \partial N_{i} } \right)_{S,P}
+                  = \left(\frac{ \partial G }{ \partial N_{i} } \right)_{T,P,N_{j \neq i}}
+    \end{align*}
+    \[
+    S =  -\left(\frac{ \partial G }{ \partial T } \right)_{P} = -\left(\frac{ \partial A }{ \partial T } \right)_{V} 
+    \]
+    \subsection*{ideal gas things}
+    \[\underline{U}^{\text{IG}}  = C_v^* T\]
+    \[\underline{H}^{\text{IG}}  = C_p^* T\]
+    \[\Delta S^{\text{IG}} = C_p \ln \frac{T_2}{T_1} - R \ln \frac{P_2}{P_1}\]
+    \[\Delta G^{\text{IG}} \biggl\lvert_T = RT \ln \frac{P_2}{P_1}\]
+    \subsection*{legendre (wrt $\xi_1$)}
+    \[\tilde{\theta} \equiv \theta - \left(\frac{ \partial \theta }{ \partial \xi_{1} } \right)_{\xi_{j \neq 1}} \xi_{1} = \theta - \tilde{\xi}_{1} \xi_{1}  \]
+    \[\left(\frac{ \partial \tilde{\theta} }{ \partial \tilde{\xi}_{1} } \right)_{\xi_{2}, \xi_{3}\dots}  = - \xi_{1}\]
+\end{minipage}
+\begin{minipage}[t]{0.48\textwidth}
+    \subsection*{volterra}
+    \[\left(\frac{ \delta g }{ \delta x_{i} } \right) = \left(\frac{ \partial g }{ \partial x_{i} } \right)_{} - \frac{1}{C} \sum_{j=1}^{C} \left(\frac{ \partial g }{ \partial x_{j} } \right)_{}  \]
+    \[\bar{g}_{i} = g + \left(\frac{ \partial g }{ \partial x_{i} } \right)_{} - \sum_{j=1}^C \left(\frac{ \partial g }{ \partial x_{j} } \right)_{} x_{j}   \]
+    \subsection*{partial molar property} 
+    \[ \bar{\theta}_i (T,P,\underline{x}) = \left( \frac{\partial ( N\underline\theta)}{\partial N_i} \right)_{T,P,} \]
+    \[{ \Delta_{\text{mix}} \theta = \sum_{i=1}^{\mathcal{C}} N_i \left[ \bar V_i - \underline V_i \right] } = \theta - \sum_{i=1}^{\mathcal{C}} N_i \underline\theta_i \]
+    \subsection*{gibbs-duhem}
+    \[ \sum N_{i} d\bar{\theta}\,\bigl\lvert_{T,P} = 0  \]
+    \[ \sum x_{i} d\bar{\theta}\,\bigl\lvert_{T,P} = 0 \]
+    \[x_{1}\left(\frac{ \partial \bar{\theta}_{1} }{ \partial x_{1} } \right)_{T,P} +x_{2}\left(\frac{ \partial \bar{\theta}_{2} }{ \partial x_{1} } \right)_{T,P} = 0\]
+    \subsection*{reactions}
+    \[\alpha A + \beta B \longleftrightarrow \rho R + \dots\]
+    - products positive, reactants negative, inerts 0
+    \[X \equiv \frac{N_{i} - N_{i,0}}{\nu_{i}}\]
+    \[N_{i} = N_{i,0} + \nu_{i}X\]
+    \subsection*{independent reactions}
+    \subsubsection*{given reactions, use \underline{\underline{k}}}
+    - column for each component, row for each reaction
+    \[\text{rank}(\mathbf{k}) = \text{number of independent reactions}\]
+    \subsubsection*{given components, use \underline{\underline{a}}}
+    - column for each component, row for elements
+    \[S = \text{rank}(\mathbf{a})\]
+    \[I = C - S\]
+\end{minipage}
+\pagebreak
+
+\begin{minipage}[t]{0.5\textwidth}
+    \subsubsection*{reacting systems}
+    mass balance for reacting system
+    \[\frac{dN}{dt} = \sum_{k}^K \dot{N}_{k} + \sum_{i} \sum_{j} \nu_{ij} \dot{X}_{j}\]
+    energy balance for reacting system
+    \[\frac{dU}{dt} = \sum_{k}^K(\dot{N}\underline{H})_{k} + \dot{Q} + W_{s} -P \frac{dV}{dt}\]
+    for CSTR
+    \[\frac{dU}{dt} = \sum^{C} (\dot{N}\underline{H})_{in} + \sum^{C} (\dot{N}\underline{H})_{out} + \dot{Q} \]
+    \subsubsection*{standard state heats of reactions}
+    \[\Delta_{\text{rxn}} H^{\circ} = \sum_{i} \nu_{i}\Delta_{\text{form}} \underline{H}_{i}^{\circ}\]
+    \subsection*{pmp from experiment}
+    \[\Delta_{\text{mix}} \underline{V} - x_{1} \left(\frac{ \partial \Delta \underline{V} }{ \partial x_{1} } \right)_{T,P} = (\bar{V}_{2} - \underline{V}_{2})\]
+    \subsection*{gibbs phase rule}
+    \[\mathcal{F} = C - M - P + 2\]
+    \subsection*{partial pressure; fugacity}
+    \[P_{i} = x_{i}P_{\text{total}}\]
+    fugacity using ideal gas mixture as reference
+    \begin{align*}
+        \bar{f}(T,P,\underline{x}) &= P_i \exp \left( \frac{\bar{G}_{i} (T,P,\underline{x}) - \bar{G}_{i}^{\text{IGM}}(T,P,\underline{x})}{RT} \right)  \\ \\
+        &= P_i \exp \left( \frac{1}{RT} \int_{0}^P (\bar{V}_{i}- \bar{V}_{i}^{\text{IG}})\,dP \right)
+    \end{align*} 
+    \begin{minipage}[t]{0.47\textwidth}
+        ideal mixture
+        \[\bar{f}_{i}^{\text{IM}} = x_{i}f_{i}(T,P)\]
+    \end{minipage}
+    \begin{minipage}[t]{0.47\textwidth}
+        ideal gas mixture
+        \[ \bar{f}_{i}^{\text{IGM}} = x_{i} P_{\text{total}} \]
+    \end{minipage}
+    
+    
+
+    from eos
+    \begin{align*}
+        \ln \bar{\phi}  &= \frac{1}{RT}\int_{\infty}^{ZRT/P} \biggl[  \frac{RT}{V} - N \left(\frac{ \partial P }{ \partial N_{i} } \right)_{T,V,N_{j \neq i}} \biggr] \, d\underline{V} - \ln Z \\
+        &= \ln \frac{\bar{f}_i}{x_i P}
+    \end{align*}
+    fugacity coefficient
+    \[ \bar{\phi_i} = \frac{\bar{f}_i}{x_i P}\]
+
+
+\end{minipage}
+\begin{minipage}[t]{0.47\textwidth}
+    \begin{center}
+        \begin{tabular}{@{}lll@{}}
+            \toprule
+            property                                  & ideal gas mixture                           & $\Delta_{\text{mix}}\theta$ \\ \midrule
+            $\bar{U}^{\text{IGM}}$                    & $\underline{U}^{\text{IG}}$                    & 0                           \\
+            $\bar{H}^{\text{IGM}}$                    & $\underline{H}^{\text{IG}}$                    & 0                           \\
+            $\bar{V}^{\text{IGM}}$ & $\underline{V}^{\text{IG}}(T,P)$               & 0                           \\
+            $\bar{S}^{\text{IGM}}$ & $\underline{S}^{\text{IG}}(T,P) - R \ln x_{i}$  & $-R \sum x_{i} \ln x_{i}$   \\
+            $\bar{G}^{\text{IGM}}$                    & $\underline{G}^{\text{IG}}(T,P) + RT \ln x_{i}$ & $RT \sum x_{i} \ln x_{i}$   \\ 
+            $\bar{A}^{\text{IGM}}$                    & $\underline{A}^{\text{IG}}(T,P) + RT \ln x_{i}$ & $RT \sum x_{i} \ln x_{i}$   \\ 
+            \bottomrule
+        \end{tabular}
+        \begin{tabular}{@{}lll@{}}
+            \toprule
+            property                                  & ideal mixture                           & $\Delta_{\text{mix}}\theta$ \\ \midrule
+            $\underline{U}^{\text{IM}}$                    & $\sum x_i \underline{U}_i$                    & 0                           \\
+            $\underline{H}^{\text{IM}}$                    & $\sum x_i \underline{H}_i$                    & 0                           \\
+            $\underline{V}^{\text{IM}}$                           & $\sum x_i \underline{V}$               & 0                           \\
+            $\underline{S}^{\text{IM}}$                     & $\sum x_i \underline{S}_i - R \sum x_i \ln x_{i}$  & $-R \sum x_{i} \ln x_{i}$   \\
+            $\underline{A}^{\text{IM}}$                     & $\sum x_i \underline{A}_i + RT \sum x_i \ln x_{i}$  & $RT \sum x_{i} \ln x_{i}$   \\
+            $\underline{G}^{\text{IM}}$                     & $\sum x_i \underline{G}_i + RT \sum x_i \ln x_{i}$  & $RT \sum x_{i} \ln x_{i}$   \\
+            $\bar{S}^{\text{IM}}_i$                     & $\underline{S}_i(T,P) - R \ln x_{i}$  & $-R \sum x_{i} \ln x_{i}$   \\
+            $\bar{A}^{\text{IM}}_i$                    & $\underline{A}_i(T,P) + RT \ln x_{i}$ & $RT \sum x_{i} \ln x_{i}$   \\ 
+            $\bar{G}^{\text{IM}}_i$                    & $\underline{G}_i(T,P) + RT \ln x_{i}$ & $RT \sum x_{i} \ln x_{i}$   \\             
+            \bottomrule
+        \end{tabular}
+    \end{center}
+    excess properties
+    \[\bar{\theta}^{\text{ex}}_i = \bar{\theta}_{i} - \bar{\theta}^{\text{IM}}_{i}\]
+    \[\Delta_{\text{mix}}\underline{\theta} (T,P,\underline{x}) = \Delta_{\text{mix}}\underline{\theta}^{\text{IM}}(T,P,\underline{x}) + \underline{\theta}^{\text{ex}}\]
+    excess gibbs
+    \begin{align*}
+        \bar{G}^{\text{ex}}_{i} &= \left(\frac{ \partial N \underline{G}^{\text{ex}} }{ \partial N_{i} } \right)_{T,P,N_{j \neq i}}  
+        = RT \ln \left( \frac{\bar{f}_{i}}{x_{i}f_{i}} \right)  \\ 
+        &= RT \ln\left( \frac{\bar{\phi}_{i}}{\phi_{i}} \right) 
+        = \int_{0}^P \bar{V}_{i} - \underline{V}_{i} \ dP
+    \end{align*}
+    activity coefficient
+    \[\gamma_{i} = \frac{\bar{f}_{i}}{x_{i} f_{i}} = \frac{\bar{\phi}_{i}}{\phi_{i}} \]
+    \[RT \ln (\gamma_{i}) = \bar{G}_{i}^{ex}\]
+    g-d for activity coefficients
+    \[\sum x_{i} d\ln \gamma_{i} = 0\]
+    lewis randall rule (low or high pressure)
+    \[\bar{f}_{i} = y_{i} f_{i} \]
+    \subsection*{VLE}
+    low pressure vle
+    \[x_{i} \gamma_{i} P^{\text{vap}}_{i} = y_{i}P_{\text{total}}\]
+    low pressure; ideal liquid; raoults
+    \[x_{i} P^{\text{vap}}_{i} = y_{i} P_{\text{total}} \]
+\end{minipage}
+
+\begin{figure}[H]
+    \includegraphics[width=0.52\textwidth, frame]{pxy.png}
+    \includegraphics[width=0.442\textwidth, frame]{txy.png}
+\end{figure}
+\begin{minipage}[t]{0.47\textwidth}
+    useful vle problem solutions
+    \[\sum x_{i} P^{\text{vap}}_{i}(T) = P_{\text{total}}\]
+    \[P_{\text{total}} = \frac{1}{\displaystyle\sum \frac{y_{i}}{P^{\text{vap}}_{i}}}\]
+    \[k_i \equiv \frac{y_i}{x_i} \] 
+    \[y_{i} = \frac{z_{i} k_{i} }{1 + V(k_{i} -1)} \hspace{2em} x_{i} = \frac{z_{i} }{1 + V(k_{i} -1)}\] 
+\end{minipage}
+\begin{minipage}[t]{0.47\textwidth}
+    positive azeotrope
+    \begin{itemize}
+        \item minimum boiling T; maximum pressure
+        \item $k_i>1$ before $x_{az}$ (for more volatile)
+        \item positive deviation from raoults
+    \end{itemize}
+    negative azeotrope
+    \begin{itemize}
+        \item maximum boiling T minimum pressure
+        \item $k_i<1$ before $x_{az}$ (for more volatile)
+        \item negative deviation from raoults
+    \end{itemize}
+\end{minipage}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.48\textwidth, frame]{pos_azeo.png}
+    \includegraphics[width=0.48\textwidth, frame]{neg_azeo.png}
+\end{figure}
+\begin{minipage}[t]{0.55\textwidth}
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.99\textwidth]{xy_azeotropes.pdf}
+    \end{figure}
+\end{minipage}
+\begin{minipage}[t]{0.37\textwidth}
+    relative volatility
+    \[\alpha_{12} = \frac{K_1}{K_2}\]
+    \begin{itemize}
+        \item relative volatility = 1 at azeotrope
+        \item if pure component limits are on opposite sides of 1, an azeotrope likely exists
+    \end{itemize}
+\end{minipage}
+
+
+\begin{minipage}[t]{0.3\textwidth}
+    reflux ratio, $q$
+    \[q = \frac{L}{D}\]
+\end{minipage}
+\begin{minipage}[t]{0.3\textwidth}
+    upper operating line
+    \[y = \frac{x_{D}}{1+q} + \frac{x_{i}q}{1+q}\]
+    slope less than 1
+\end{minipage}
+\begin{minipage}[t]{0.3\textwidth}
+    lower operating line
+    \[y = x \left(\frac{ q+\frac{F}{D}}{q+1} \right) - x_{b} \left( \frac{\frac{F}{D} -1}{q+1} \right)\]
+    slope greater than 1
+\end{minipage}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.5\textwidth]{mct_method.png}
+\end{figure}
+
+\begin{minipage}[t]{0.48\textwidth}
+    \subsubsection*{activity coeff models}
+    one constant margules
+    \[ \underline{G}^{\text{ex}} = A x_1 x_2 \hspace{3em} RT \ln \gamma_1 = Ax_2^2 \]
+    \begin{itemize}
+        \item symmetric!
+    \end{itemize}
+\end{minipage}
+\begin{minipage}[t]{0.48\textwidth}
+    Redlich-Kister
+    \[ \underline{G}^{\text{ex}} =  x_1 x_2 \left\{ A + B (x_1 - x_2) + C (x_1 - x_2)^2  \dots \right\}  \]
+    two constant margules (redlich, but only A,B nonzero)
+    \[RT \ln \gamma_1 = \alpha_1 x_2^2 + \beta_1 x_2^3 \]
+    \[RT \ln \gamma_2 = \alpha_2 x_1^2 + \beta_2 x_1^3 \]
+    \[  \alpha_i = A + 3(-1)^{i+1}B  \]
+    \[  \beta_i = 4(-1)^i B \]
+    \begin{itemize}
+        \item no longer necessarily symmetric
+    \end{itemize}
+\end{minipage}
+
+
+
+
+
+
+
+\end{document}

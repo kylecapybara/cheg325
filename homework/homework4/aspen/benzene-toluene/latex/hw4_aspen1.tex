@@ -1,0 +1,64 @@
+\documentclass{article}
+
+\input{preamble}
+\usepackage{tikz-3dplot}
+\usepackage{booktabs}
+\usepackage{titling}
+\usepackage{fancyhdr}
+\usetikzlibrary{patterns}
+
+\usepackage{tcolorbox}
+\usepackage[export]{adjustbox}
+\usepackage{tikz}
+
+\tcbset{colback=blue!7!white}
+\tcbsetforeverylayer{colframe=blue!75!black}
+
+
+\pretitle{\vspace{-4em}\begin{flushleft}\LARGE} % Adjust the size and alignment
+    \posttitle{\end{flushleft}}
+    \preauthor{\begin{flushleft}\large} % Adjust the size and alignment
+    \postauthor{\hspace{2em} \large \thedate\end{flushleft}} % Place author and date on the same line
+    \predate{} % Remove the default date formatting
+    \postdate{} % Remove the default date formatting
+
+\pagestyle{fancy}
+\fancyhf{} % Clear all header and footer fields
+\fancyfoot[R]{\thepage} % Right-align the page number in the footer
+\renewcommand{\headrulewidth}{0pt} % Remove the header rule
+\renewcommand{\footrulewidth}{0pt} % Remove the footer rule
+\setlength{\fboxrule}{1pt}
+
+\geometry{
+    top=2cm,    % Top margin
+    bottom=3cm, % Bottom margin
+    left=2.5cm, % Left margin
+    right=2.5cm % Right margin
+}
+\title{\bfseries CHEG325 Aspen Homework 4 Benzene-Toluene}
+\author{Sebastian Blough and Kyle Wodehouse}
+\date{}
+
+\begin{document}
+\maketitle
+\noindent
+We obtained the data from Aspen's NIST TDE via adding Benzene and Toluene as components, selecting binary mixture in the TDE, and locating the isothermal VLE.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.3\textwidth, frame]{img/1.JPG}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\textwidth, frame]{img/2.png}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\textwidth, frame]{img/3.png}
+\end{figure}
+
+The last piece of information we need is the pure component vapor pressures at this temperature. Luckily, our data set includes when the mole fraction is 0 and 1 so those points are the pure component vapor pressures. Now this data may be looked at inside a jupyter notebook on the next page.
+
+
+\end{document}

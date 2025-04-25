@@ -1,0 +1,666 @@
+\documentclass{article}
+
+\input{preamble}
+\usepackage{tikz-3dplot}
+\usepackage{booktabs}
+\usepackage{titling}
+\usepackage{fancyhdr}
+\usetikzlibrary{patterns}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+
+\usepackage{tcolorbox}
+\usepackage[export]{adjustbox}
+\usepackage{tikz}
+
+\tcbset{colback=blue!7!white}
+\tcbsetforeverylayer{colframe=blue!75!black}
+
+
+\pretitle{\vspace{-4em}\begin{flushleft}\LARGE} % Adjust the size and alignment
+    \posttitle{\end{flushleft}}
+    \preauthor{\begin{flushleft}\large} % Adjust the size and alignment
+    \postauthor{\hspace{2em} \large \thedate\end{flushleft}} % Place author and date on the same line
+    \predate{} % Remove the default date formatting
+    \postdate{} % Remove the default date formatting
+
+\pagestyle{fancy}
+\fancyhf{} % Clear all header and footer fields
+\fancyfoot[R]{\thepage} % Right-align the page number in the footer
+\renewcommand{\headrulewidth}{0pt} % Remove the header rule
+\renewcommand{\footrulewidth}{0pt} % Remove the footer rule
+\setlength{\fboxrule}{1pt}
+
+\geometry{
+    top=1.2cm,    % Top margin
+    bottom=3cm, % Bottom margin
+    left=1.0cm, % Left margin
+    right=1.0cm % Right margin
+}
+\title{\bfseries CHEG325 E1 Cheatsheets}
+\author{Kyle Wodehouse}
+\date{}
+
+\begin{document}
+\twocolumn
+\subsection*{fundamental relations}
+pure components
+\[
+dU = TdS - PdV + \underline{G} dN
+\]
+\[
+dH = T dS + V dP + \underline{G} dN
+\]
+\[
+dA = -P dV - S dT + \underline{G} dN
+\]
+\[
+dG = V dP - S dT + \underline{G} dN
+\]
+mixtures 
+\[
+dU = T dS - P dV + \sum^C_{i=1} {\mu}_{i} dN_{i}
+\]
+\subsection*{partial def of variables}
+
+\begin{align*}
+\underline{G} &= \left(\frac{\partial U}{\partial N}\right)_{S,V} = \left(\frac{\partial H}{\partial N}\right)_{P,S} = \left(\frac{\partial A}{\partial N}\right)_{T,V} \\[6pt]
+                &= \left(\frac{\partial G}{\partial N}\right)_{T,P} = -T\left(\frac{\partial S}{\partial N}\right)_{U,V}
+\end{align*}
+\begin{align*}
+\bar{G}_{i}  &= \left(\frac{ \partial U }{ \partial N_{i} } \right)_{S,V,N_{j\neq i}}
+                = \left(\frac{ \partial A }{ \partial N_{i} } \right)_{T,V,N_{j \neq i}} \\
+                &= \left(\frac{ \partial H }{ \partial N_{i} } \right)_{S,P}
+                = \left(\frac{ \partial G }{ \partial N_{i} } \right)_{T,P,N_{j \neq i}}
+\end{align*}
+\[
+S =  -\left(\frac{ \partial G }{ \partial T } \right)_{P} = -\left(\frac{ \partial A }{ \partial T } \right)_{V} 
+\]
+\subsection*{ideal gas things}
+\[\underline{U}^{\text{IG}}  = C_v^* T\]
+\[\underline{H}^{\text{IG}}  = C_p^* T\]
+\[\Delta S^{\text{IG}} = C_p \ln \frac{T_2}{T_1} - R \ln \frac{P_2}{P_1}\]
+\[\Delta G^{\text{IG}} \biggl\lvert_T = RT \ln \frac{P_2}{P_1}\]
+\subsection*{legendre (wrt $\xi_1$)}
+\[\tilde{\theta} \equiv \theta - \left(\frac{ \partial \theta }{ \partial \xi_{1} } \right)_{\xi_{j \neq 1}} \xi_{1} = \theta - \tilde{\xi}_{1} \xi_{1}  \]
+\[\left(\frac{ \partial \tilde{\theta} }{ \partial \tilde{\xi}_{1} } \right)_{\xi_{2}, \xi_{3}\dots}  = - \xi_{1}\]
+\subsection*{volterra}
+\[\left(\frac{ \delta g }{ \delta x_{i} } \right) = \left(\frac{ \partial g }{ \partial x_{i} } \right)_{} - \frac{1}{C} \sum_{j=1}^{C} \left(\frac{ \partial g }{ \partial x_{j} } \right)_{}  \]
+\[\bar{g}_{i} = g + \left(\frac{ \partial g }{ \partial x_{i} } \right)_{} - \sum_{j=1}^C \left(\frac{ \partial g }{ \partial x_{j} } \right)_{} x_{j}   \]
+\subsection*{partial molar property} 
+\[ \bar{\theta}_i (T,P,\underline{x}) = \left( \frac{\partial ( N\underline\theta)}{\partial N_i} \right)_{T,P,} \]
+\[{ \Delta_{\text{mix}} \theta = \sum_{i=1}^{\mathcal{C}} N_i \left[ \bar V_i - \underline V_i \right] } = \theta - \sum_{i=1}^{\mathcal{C}} N_i \underline\theta_i \]
+\subsection*{gibbs-duhem}
+\[ \sum N_{i} d\bar{\theta}\,\bigl\lvert_{T,P} = 0  \]
+\[ \sum x_{i} d\bar{\theta}\,\bigl\lvert_{T,P} = 0 \]
+\[x_{1}\left(\frac{ \partial \bar{\theta}_{1} }{ \partial x_{1} } \right)_{T,P} +x_{2}\left(\frac{ \partial \bar{\theta}_{2} }{ \partial x_{1} } \right)_{T,P} = 0\]
+\subsection*{reactions}
+\[\alpha A + \beta B \longleftrightarrow \rho R + \dots\]
+- products positive, reactants negative, inerts 0
+\[X \equiv \frac{N_{i} - N_{i,0}}{\nu_{i}}\]
+\[N_{i} = N_{i,0} + \nu_{i}X\]
+\subsection*{independent reactions}
+\subsubsection*{given reactions, use \underline{\underline{k}}}
+- column for each component, row for each reaction
+\[\text{rank}(\mathbf{k}) = \text{number of independent reactions}\]
+\subsubsection*{given components, use \underline{\underline{a}}}
+- column for each component, row for elements
+\[S = \text{rank}(\mathbf{a})\]
+\[I = C - S\]
+
+\subsubsection*{reacting systems}
+mass balance for reacting system
+\[\frac{dN}{dt} = \sum_{k}^K \dot{N}_{k} + \sum_{i} \sum_{j} \nu_{ij} \dot{X}_{j}\]
+energy balance for reacting system
+\[\frac{dU}{dt} = \sum_{k}^K(\dot{N}\underline{H})_{k} + \dot{Q} + W_{s} -P \frac{dV}{dt}\]
+for CSTR
+\[\frac{dU}{dt} = \sum^{C} (\dot{N}\underline{H})_{in} + \sum^{C} (\dot{N}\underline{H})_{out} + \dot{Q} \]
+\subsubsection*{standard state heats of reactions}
+\[\Delta_{\text{rxn}} H^{\circ} = \sum_{i} \nu_{i}\Delta_{\text{form}} \underline{H}_{i}^{\circ}\]
+\subsection*{pmp from experiment}
+\[\Delta_{\text{mix}} \underline{V} - x_{1} \left(\frac{ \partial \Delta \underline{V} }{ \partial x_{1} } \right)_{T,P} = (\bar{V}_{2} - \underline{V}_{2})\]
+\subsection*{gibbs phase rule}
+\[\mathcal{F} = C - M - P + 2\]
+\subsection*{partial pressure; fugacity}
+\[P_{i} = x_{i}P_{\text{total}}\]
+fugacity using ideal gas mixture as reference
+\begin{align*}
+    \bar{f}(T,P,\underline{x}) &= P_i \exp \left( \frac{\bar{G}_{i} (T,P,\underline{x}) - \bar{G}_{i}^{\text{IGM}}(T,P,\underline{x})}{RT} \right)  \\ \\
+    &= P_i \exp \left( \frac{1}{RT} \int_{0}^P (\bar{V}_{i}- \bar{V}_{i}^{\text{IG}})\,dP \right)
+\end{align*} 
+ideal mixture
+\[\bar{f}_{i}^{\text{IM}} = x_{i}f_{i}(T,P)\]
+ideal gas mixture
+\[ \bar{f}_{i}^{\text{IGM}} = x_{i} P_{\text{total}} \]
+
+
+from eos
+\begin{align*}
+    \ln \bar{\phi}  &= \frac{1}{RT}\int_{\infty}^{ZRT/P} \biggl[  \frac{RT}{V} - N \left(\frac{ \partial P }{ \partial N_{i} } \right)_{T,V,N_{j \neq i}} \biggr] \, d\underline{V} - \ln Z \\
+    &= \ln \frac{\bar{f}_i}{x_i P}
+\end{align*}
+fugacity coefficient
+\[ \bar{\phi_i} = \frac{\bar{f}_i}{x_i P}\]
+
+
+\begin{center}
+    \begin{tabular}{@{}lll@{}}
+        \toprule
+        property                                  & ideal gas mixture                           & $\Delta_{\text{mix}}\theta$ \\ \midrule
+        $\bar{U}^{\text{IGM}}$                    & $\underline{U}^{\text{IG}}$                    & 0                           \\
+        $\bar{H}^{\text{IGM}}$                    & $\underline{H}^{\text{IG}}$                    & 0                           \\
+        $\bar{V}^{\text{IGM}}$ & $\underline{V}^{\text{IG}}(T,P)$               & 0                           \\
+        $\bar{S}^{\text{IGM}}$ & $\underline{S}^{\text{IG}}(T,P) - R \ln x_{i}$  & $-R \sum x_{i} \ln x_{i}$   \\
+        $\bar{G}^{\text{IGM}}$                    & $\underline{G}^{\text{IG}}(T,P) + RT \ln x_{i}$ & $RT \sum x_{i} \ln x_{i}$   \\ 
+        $\bar{A}^{\text{IGM}}$                    & $\underline{A}^{\text{IG}}(T,P) + RT \ln x_{i}$ & $RT \sum x_{i} \ln x_{i}$   \\ 
+        \bottomrule
+    \end{tabular}
+    \begin{tabular}{@{}lll@{}}
+        \toprule
+        property                                  & ideal mixture                           & $\Delta_{\text{mix}}\theta$ \\ \midrule
+        $\underline{U}^{\text{IM}}$                    & $\sum x_i \underline{U}_i$                    & 0                           \\
+        $\underline{H}^{\text{IM}}$                    & $\sum x_i \underline{H}_i$                    & 0                           \\
+        $\underline{V}^{\text{IM}}$                           & $\sum x_i \underline{V}$               & 0                           \\
+        $\underline{S}^{\text{IM}}$                     & $\sum x_i \underline{S}_i - R \sum x_i \ln x_{i}$  & $-R \sum x_{i} \ln x_{i}$   \\
+        $\underline{A}^{\text{IM}}$                     & $\sum x_i \underline{A}_i + RT \sum x_i \ln x_{i}$  & $RT \sum x_{i} \ln x_{i}$   \\
+        $\underline{G}^{\text{IM}}$                     & $\sum x_i \underline{G}_i + RT \sum x_i \ln x_{i}$  & $RT \sum x_{i} \ln x_{i}$   \\
+        $\bar{S}^{\text{IM}}_i$                     & $\underline{S}_i(T,P) - R \ln x_{i}$  & $-R \sum x_{i} \ln x_{i}$   \\
+        $\bar{A}^{\text{IM}}_i$                    & $\underline{A}_i(T,P) + RT \ln x_{i}$ & $RT \sum x_{i} \ln x_{i}$   \\ 
+        $\bar{G}^{\text{IM}}_i$                    & $\underline{G}_i(T,P) + RT \ln x_{i}$ & $RT \sum x_{i} \ln x_{i}$   \\             
+        \bottomrule
+    \end{tabular}
+\end{center}
+excess properties
+\[\bar{\theta}^{\text{ex}}_i = \bar{\theta}_{i} - \bar{\theta}^{\text{IM}}_{i}\]
+\[\Delta_{\text{mix}}\underline{\theta} (T,P,\underline{x}) = \Delta_{\text{mix}}\underline{\theta}^{\text{IM}}(T,P,\underline{x}) + \underline{\theta}^{\text{ex}}\]
+excess gibbs
+\begin{align*}
+    \bar{G}^{\text{ex}}_{i} &= \left(\frac{ \partial N \underline{G}^{\text{ex}} }{ \partial N_{i} } \right)_{T,P,N_{j \neq i}}  
+    = RT \ln \left( \frac{\bar{f}_{i}}{x_{i}f_{i}} \right)  \\ 
+    &= RT \ln\left( \frac{\bar{\phi}_{i}}{\phi_{i}} \right) 
+    = \int_{0}^P \bar{V}_{i} - \underline{V}_{i} \ dP
+\end{align*}
+activity coefficient
+\[\gamma_{i} = \frac{\bar{f}_{i}}{x_{i} f_{i}} = \frac{\bar{\phi}_{i}}{\phi_{i}} \]
+\[RT \ln (\gamma_{i}) = \bar{G}_{i}^{ex}\]
+g-d for activity coefficients
+\[\sum x_{i} d\ln \gamma_{i} = 0\]
+lewis randall rule (low or high pressure)
+\[\bar{f}_{i}^V = y_{i} f_{i}^V \]
+\subsection*{VLE}
+low pressure vle
+\[x_{i} \gamma_{i} P^{\text{vap}}_{i} = y_{i}P_{\text{total}}\]
+low pressure; ideal liquid; raoults
+\[x_{i} P^{\text{vap}}_{i} = y_{i} P_{\text{total}} \]
+
+\begin{figure*} % Adjusted float specifier to 'ht'
+    \includegraphics[width=0.52\textwidth, frame]{pxy.png}
+    \includegraphics[width=0.442\textwidth, frame]{txy.png}
+\end{figure*}
+\subsection*{useful vle problem solutions}
+bubble pressure
+\[\sum x_{i} \gamma_i P^{\text{vap}}_{i}(T) = P_{\text{total}}\]
+dew pressure
+\[P_{\text{total}} = \frac{1}{\displaystyle\sum \frac{y_{i}}{P^{\text{vap}}_{i}}} = \frac{1}{\displaystyle\sum \frac{y_{i}}{\gamma_i P^{\text{vap}}_{i}}}\]
+\[k_i \equiv \frac{y_i}{x_i} = \frac{\gamma_i P^{\text{vap}}_{i} }{P_{\text{total}}} \] 
+\[y_{i} = \frac{z_{i} k_{i} }{1 + V(k_{i} -1)} \hspace{2em} x_{i} = \frac{z_{i} }{1 + V(k_{i} -1)}\] 
+positive azeotrope
+\begin{itemize}
+    \item minimum boiling T; maximum pressure
+    \item $k_i>1$ before $x_{az}$ (for more volatile)
+    \item positive deviation from raoults
+\end{itemize}
+negative azeotrope
+\begin{itemize}
+    \item maximum boiling T minimum pressure
+    \item $k_i<1$ before $x_{az}$ (for more volatile)
+    \item negative deviation from raoults
+\end{itemize}
+relative volatility
+\[\alpha_{12} = \frac{K_1}{K_2} = \frac{\gamma_1 P^\mathrm{vap}_1}{\gamma_2 P^\mathrm{vap}_2}\]
+\begin{itemize}
+    \item relative volatility = 1 at azeotrope
+    \item if pure component limits are on opposite sides of 1, an azeotrope likely exists
+\end{itemize}
+reflux ratio, $q$
+\[q = \frac{L}{D}\]
+upper operating line
+\[y = \frac{x_{D}}{1+q} + \frac{x_{i}q}{1+q}\]
+slope less than 1
+lower operating line
+\[y = x \left(\frac{ q+\frac{F}{D}}{q+1} \right) - x_{b} \left( \frac{\frac{F}{D} -1}{q+1} \right)\]
+slope greater than 1
+\subsection*{fugacity of species in mixture}
+vapor
+\[\bar{f}_{i} = y_{i} P \left( \frac{\bar{f}_{i}}{y_{i}P} \right) = y_i P \left(\frac{f}{P}\right) \]
+liquid
+\[\bar{f}_{i} = x_{i} \gamma_{i} f_{i}\]
+
+\subsection*{poynting correction}
+\begin{align*}
+f^{\mathrm{L}}(T,P) &= P^{\mathrm{vap}}(T)
+\left(\frac{f}{P}\right)_{\mathrm{sat},T} \exp\!\biggl[\frac{1}{RT}\int_{P^{\mathrm{vap}}(T)}^{P} \underline{V}\,dP\biggr] \\
+&= f_{\mathrm{sat}}(T)\exp{\left[{\frac{1}{R T}}\int_{P^{\mathrm{vap}}(T)}^{P}\underline{V}\,d P\right]}
+\end{align*}
+\subsection*{henry law forms}
+\[\bar{f}_{i}^{L} (T,P,\underline{x}) = x_{i} \gamma_{i}^{*}(T,P,\underline{x}) H_{i}(T,P) \tag{molarity} \]
+\[ \bar{f}_{i}^{L}(T,P,M_{i}) = M_{i} \gamma_{i}^{\square}(T,P,M_{i})  \mathcal{H} (T,P) \tag{molality} \]
+\subsection*{molality henry law}
+molality eqn
+\[M_{\mathrm{i}}={\frac{n_{\mathrm{i}} \,1000}{m_{\mathrm{s}}n_{\mathrm{s}}}}\]
+relating henry coeffs
+\[\mathcal{H}_i = \frac{x_{\mathrm{i}}\;1000}{m_{\mathrm{s}}M_{\mathrm{i}}} H_i\]
+
+
+
+%%%%%%%%%%%%
+% exam 2 
+%%%%%%%%%%%%
+
+
+\twocolumn
+
+\section*{LLE}
+\[x_{i}^{I} \gamma_{i}^{I} = x_{i}^{II} \gamma_{i}^{II} \tag{important LLE eqn}\]
+
+\begin{figure}[ht] % Adjusted float specifier to 'ht'
+    \centering
+    \includegraphics[width=0.48\textwidth, frame]{lle_gibbs.png}
+\end{figure}
+
+\begin{itemize}
+    \item spinodal points are inflection points
+    \item binodals share common tangent line
+    \item composition of liquid phases given by binodals
+    \item between the bounds and the spinodals is the 'metastable region'
+    \item between spinodal points is the region of absolute instability
+\end{itemize}
+stability criteria
+\[ \left(\frac{ \partial^{2} G }{ \partial x^{2} } \right) > 0  \]
+
+
+\section*{various activity coefficient models}
+\subsection*{one constant margules}
+\[ \underline{G}^{\mathrm{ex}} = Ax_{1}x_{2} \hspace{3em} \ln \gamma_{1} = \frac{A}{RT}x_{2}^{2} \]
+upper consulate temperature
+\[ T_\mathrm{uc} = \frac{A}{2R} \]
+\subsection*{redlich-kister}
+\[ \underline{G}^{\mathrm{ex}} = x_{1}x_{2} (A + B(x_{1}-x_{2}) + C(x_{1}-x_{2})^{2} + \dots) \]
+\subsection*{two constant margules}
+\[ RT \ln \gamma_{1} = \alpha_{1}x_{2}^{2} + \beta_{1}x_{2}^{3} \]
+\begin{itemize}
+    \item $\alpha, \beta$ are related to $A,B$ in redlich-kister expansion
+\end{itemize}
+\subsection*{regular solution}
+\begin{itemize}
+    \item a regular solution has $\underline{V}^{\mathrm{ex}} = \underline{S}^{\mathrm{ex}} = 0$
+\end{itemize}
+\[\Phi_{\mathrm{i}}\equiv{\frac{x_{\mathrm{i}}\underline{V}_{\mathrm{i}}}{x_{1}\underline{{{V}}}_{1}+x_{2}\underline{{{V}}}_{2}}} \hspace{3em} \delta_{\mathrm{i}}\equiv\left(\frac{\Delta_{\mathrm{vap}}\underline{U}_{\mathrm{i}}}{V_{\mathrm{i}}}\right)^{1/2}\]
+activity coeff
+\[\begin{array}{l}{{R T\ \ln\gamma_{1}=\underline{{{V}}}_{1}\Phi_{2}^{2}[\delta_{1}-\delta_{2}]^{2}}}\\ {{R T\ \ln\gamma_{2}=\underline{{{V}}}_{2}\Phi_{1}^{2}[\delta_{1}-\delta_{2}]^{2}}}\end{array}\nonumber\]
+\subsection*{van laar model}
+\[ \ln \gamma_{1} = \frac{\alpha}{\biggl[  1+ \displaystyle\frac{\alpha x_{1}}{\beta x_{2}} \biggr]^{2}} \hspace{3em} \ln \gamma_{2} = \frac{\beta}{\biggl[  1+ \displaystyle\frac{\beta x_{2}}{\alpha x_{1}} \biggr]^{2}} \]
+from infinite dilution
+\[
+\alpha = \ln \gamma_{1}^{\infty} \quad \quad \beta = \ln \gamma_{2}^{\infty}
+\]
+
+from one point
+\[\alpha=\left(1+\frac{x_{2}\ln\gamma_{2}}{x_{1}\ln\gamma_{1}}\right)^{2}\ln\gamma_{1}\]
+\[\beta=\left(1+\frac{x_{1}\ln\gamma_{1}}{x_{2}\ln\gamma_{2}}\right)^{2}\ln\gamma_{2}\]
+from regular solution
+\[\alpha=\frac{\underline{V}_{1}}{R T}(\delta_{1}-\delta_{2})^{2} \quad \beta=\frac{\underline{V}_{2}}{R T}(\delta_{1}-\delta_{2})^{2}\]
+\begin{itemize}
+    \item the $\delta$ are solubility parameters
+\end{itemize}
+from critical properties
+\[\alpha={\frac{b_{1}}{R T}}\left[{\frac{\sqrt{a_{1}}}{b_{1}}}-{\frac{\sqrt{a_{2}}}{b_{2}}}\right]^{2}  \quad \beta={\frac{b_{2}}{R T}}\left[{\frac{\sqrt{a_{1}}}{b_{1}}}-{\frac{\sqrt{a_{2}}}{b_{2}}}\right]^{2}\]
+three diff methods for a and b
+\[a=\frac{27R^{2}T_{C}^{2}}{64P_{C}}\,\,\mathrm{and}\,\,b=\frac{R T_{C}}{8P_{C}}\]
+\[a=3P_{C}\underline{V}_{C}^{2}\ \mathrm{and}\ b=\frac{\underline{V}_{C}}{3}\]
+\[a={\frac{9\underline{V}_{C}R T_{C}}{8}}{\mathrm{~and~}}b={\frac{\underline{V}_{C}}{3}}\]
+\subsection*{two-parameter wilson model}
+\[
+\frac{G^{\text{ex}}}{RT} = -x_1 \ln(x_1 + x_2 \Lambda_{12}) - x_2 \ln(x_2 + x_1 \Lambda_{21})
+\]
+and activity coeffient equations
+\[
+\ln \gamma_1 = -\ln(x_1 + x_2 \Lambda_{12}) + x_2 \left[ \frac{\Lambda_{12}}{x_1 + x_2 \Lambda_{12}} - \frac{\Lambda_{21}}{x_1 \Lambda_{21} + x_2} \right]
+\]
+\[
+\ln \gamma_2 = -\ln(x_2 + x_1 \Lambda_{21}) - x_1 \left[ \frac{\Lambda_{12}}{x_1 + x_2 \Lambda_{12}} - \frac{\Lambda_{21}}{x_1 \Lambda_{21} + x_2} \right]
+\]
+\textbf{infinite dilution}
+\[
+\ln \gamma_1^\infty = -\ln \Lambda_{12} + 1 - \Lambda_{12} 
+\]
+\[
+\ln \gamma_2^\infty = -\ln \Lambda_{21} + 1 - \Lambda_{21}
+\]
+\begin{itemize}
+    \item interestingly the wilson model cannot predict two liquid phases (no solutions to $x_{1}^{I} \gamma_{1}^{I}=x_{1}^{II}\gamma_{1}^{II}$ where $x^{I} \neq x^{II}$)
+\end{itemize}
+
+\section*{VLLE}
+\[
+\mathcal{F} = \mathcal{C} - \mathcal{M} - \mathcal{P} + 2 = 2 - 0 - 3 + 2 = 1
+\]
+\begin{itemize}
+    \item at a given temperature there is only one pressure with VLLE !
+    \item higher pressure $\longrightarrow$ two liquids
+    \item lower pressure $\longrightarrow$ single liquid and vapor
+    \item may be broken into LLE problem for liquid phases for simplicity
+\end{itemize}
+usually the liquid phases will be nearly pure components so the calculations would be greatly simplified
+\[
+P_{\mathrm{total}} = P^{\mathrm{vap}}_{1} + P^{\mathrm{vap}}_{2}
+\]
+\section*{solubility of gas in liquid mixtures}
+(letting component 1 be the solute)
+\[
+x_{1}\gamma_{1}f_{1}^{L} = y_{1} P_{\mathrm{total}}
+\]
+but this kinda creates an issue since usually the temperature will be above the critical temperature of the solute (think $\mathrm{CO_{2}}$ in water). may use corresponding states to get \(\frac{f^{L}}{P_{c}}\) at \(P=1.013\, \mathrm{bar}\) and then the following correction 
+\[
+\begin{aligned}
+f_{1}^{L}(T,P_{\mathrm{total}}) &= f_{1}^{L}(T,P=1.013\,\mathrm{bar}) \\
+&\quad \times \exp\!\left( \frac{\underline{V}_{1}^{L}(P_{\mathrm{total}}-1.013\,\mathrm{bar})}{RT} \right)
+\end{aligned}
+\]
+this is like super gay and annoying, so thankfully there's a simpler way with henry's law coefficients
+\[
+H_{1}(T,P) = \lim_{ x_{1} \to 0 } \frac{\bar{f}^{L}_{1}}{x_{1}} = \gamma_{1}^{\infty} f^{L}_{1}
+\]
+which for an ideal application gives this relationship
+\[
+x_{1}H_{1} = y_{1} P_{\mathrm{total}}
+\]
+\subsection*{temperature dependence}
+\[
+\left(\frac{ \partial \ln x }{ \partial T } \right)_{P} \approx -\frac{\Delta_{\mathrm{vap}H}}{RT^{2}}
+\]
+\begin{itemize}
+    \item when \(T<T_{c}\) the enthalpy of vaporization will always be positive
+    \item for \(T>T_{c}\) it could be negative, and solubility could increase with temperature
+\end{itemize}
+\subsection*{solubility of a gas in a salt solution}
+we have an empirical relationship for this equilibria
+\[
+\log \left( \frac{S(M)}{S_{0}} \right) = -k_{s} M
+\]
+\begin{itemize}
+    \item \(k_{s}\) "Satchenow coeff" is specific to every salt and gas pair
+    \item \(M\) is the molality of the salt
+\end{itemize}
+meaning of \(k_{s}\)
+\begin{itemize}
+    \item positive means gas solubility decreases with salt molality "salting out"
+    \item negative k means solubility increases with salt molality "salting in"
+    \begin{itemize}
+         \item you could add a fuck ton of salt and get the gas "out"
+    \end{itemize}
+\end{itemize}
+\section*{solute partitioning}
+\[
+K_{x,i}^{I/II} = \frac{x_{i}^{I}}{x_{i}^{II}}
+\]
+\begin{itemize}
+    \item typically subscript gives information about what ratio it relates to (mole fractions or mass fractions or molarities or molalities)
+    \item superscript tells you which phase is numerator and which is denominator
+\end{itemize}
+\subsection*{n-octanol and water}
+\begin{itemize}
+    \item "amphiphatic" molecule w/ hydrophilic and hydrophobic parts
+    \item fairly good model for fatty tissue in animals
+\end{itemize}
+\[
+K_{OW,i} = \frac{C^{O}_{i}}{C^{W}_{i}} = 0.114 \frac{x_{i}^{O}}{x^{W}_{i}}
+\]
+\begin{itemize}
+    \item convention to put organic phase in numerator!
+    \item usually very high, so tabulated data is in $\log K_{OW}$
+\end{itemize}
+
+\subsection*{solute extraction}
+\begin{itemize}
+    \item separating based on solubility differences
+    \item rinsing toluene with water
+\end{itemize}
+$q$ is the proportion of solute left after each rinse, $V^{II}$ is the volume of the phase being rinsed, $V^{I}$ is the volume of solvent being used to rinse
+\[
+q = \frac{V^{II}}{V^{II} + K_{i}V^{I}}
+\]
+\begin{itemize}
+    \item independent of system size
+\end{itemize}
+if you do $n$ solvent extractions the $q$ at the end is
+\[
+q_{n} = q^{n}
+\]
+\begin{itemize}
+    \item conclude that more steps = more efficient mixing (on a solvent use basis of what you consider efficiency)
+\end{itemize}
+
+\section*{osmotic equilibrium}
+two phases separated by a semi-permeable membrane. 
+\begin{itemize}
+    \item since not all components may go through membrane, the $P^{I}=P^{II}$ equilibrium condition no longer applies
+    \item by same reasoning $\bar{f}_{i}^{I}=\bar{f}_{i}^{II}$ only holds for the components which may move, too
+\end{itemize}
+\[
+\pi = P^{II}-P^{I} = \frac{RT}{\underline{V}_{\mathrm{solvent}}} x_{\mathrm{solute}} = \frac{RT}{M_{\mathrm{solute}}}C_{\mathrm{solute}}
+\]
+\begin{itemize}
+    \item only a function of $x_{\mathrm{solute}}$ not of chemistry (colligative properties)
+    \item may be used to measure molecular masses for polymers or biomolecules
+    \item looks a lot like ideal gas law - only valid for tiny concentrations
+\end{itemize}
+
+\subsection*{viral expansion}
+\[
+\frac{\pi}{RT} = \frac{C_{\mathrm{solute}}}{M_{\mathrm{solute}}} \left[ 1 + B_{2} \left( \frac{C_{\mathrm{solute}}}{M_{\mathrm{solute}}} \right) \dots \right]
+\]
+\begin{itemize}
+    \item a few ways of fitting data to find parameters $B_{2} , M$
+    \begin{itemize}
+        \item literally no  way this shows up on the exam... but could directly curve fit $\displaystyle\frac{\pi}{RT}$ vs. $C_{\mathrm{solute}}$ for params
+    \end{itemize}
+\end{itemize}
+2nd order polynomial fit version
+\[
+\frac{\pi}{RT} = \left(\frac{1}{M}\right) C_{s} + \left(\frac{B_2}{M^2}\right) C_{s}^2
+\]
+linear fit version
+\[
+\frac{\pi}{RT C_s} = \left(\frac{1}{M}\right) + \left(\frac{B_2}{M^2}\right) C_{s}
+\]
+what about the units of $B_{2}$ and $M$ (for $R$ and $T$ in SI units). 
+\[
+B_2 \ [=] \ \frac{\text{m}^3}{\text{mol}} \quad \quad M \ [=] \ \frac{\text{kg}}{\text{mol}}
+\]
+physical meaning of $B_{2}$?
+\begin{itemize}
+    \item think about pressure deviating from ideal and what that means for interactions
+    \item negative $B_{2}$ indicates favorable interactions by that logic
+\end{itemize}
+
+\subsection*{van't hoff factor}
+to correct our $\pi$ expression we need to account for different molecules dissolving/dissociating different
+\[
+i = \frac{\text{apparent  \#  molecules in solution}}{\text{moles of solute dissolved}}
+\]
+now using this to correct our $\pi$
+\[
+\pi = i \frac{RTC_{s}}{M_{s}}
+\]
+
+\begin{itemize}
+    \item now our $\pi$ accounts for salts dissociating while sugars, proteins, polymers don't
+\end{itemize}
+
+\section*{Solid Liquid Equilibrium}
+of course this starts the same place every equilibrium starts. also daddy sandy treats solids as pure components
+\[
+f_{i}^{S} = \bar{f}_{i}^{L} = x_{i} \gamma_{i} f_{i}^{L} 
+\]
+at the melting point
+\[
+f_{i}^{S}=f_{i}^{L} \longrightarrow 1 = x_{i}^{L} \gamma_{i}^{L}
+\]
+\begin{itemize}
+    \item when not at the melting point it gets a bit harder
+\end{itemize}
+\[
+\begin{aligned}
+f_1^L(T, P) &= f_1^S(T, P) \times \exp\biggl[
+\frac{1}{RT} \Bigl(
+\Delta_{\text{fus}} H(T) \Bigl(1 - \frac{T}{T_m}\Bigr) \\
+&\quad + \int_{T_m}^{T} \Delta C_P \, dT 
+- T \int_{T_m}^{T} \frac{\Delta C_P}{T} \, dT
+\Bigr)
+\biggr] \\
+\end{aligned}
+\]
+if we apply this to 1 we get
+\[
+\begin{aligned}
+\ln x_1 \gamma_1 =\; & -\frac{\Delta_{\text{fus}} H(T_m)}{RT} \left[1 - \frac{T}{T_m} \right] \\
+                     & - \frac{1}{RT} \int_{T_m}^{T} \Delta C_P \, dT \\
+                     & + \frac{1}{R} \int_{T_m}^{T} \frac{\Delta C_P}{T} \, dT
+\end{aligned}
+\]
+if $\Delta C_{p}$ constant
+\[
+\begin{aligned}
+\ln x_1 \gamma_1 =\; & - \frac{\Delta_{\text{fus}} H(T_m)}{RT} \left[ 1 - \frac{T}{T_m} \right] \\[8pt]
+                    & - \frac{\Delta C_P}{R} \left[ 1 - \frac{T_m}{T} + \ln\left( \frac{T_m}{T} \right) \right]
+\end{aligned}
+\]
+if $\Delta C_{p}=0$ 
+\[
+\ln x_1 \gamma_1 = - 
+\frac{\Delta_{\text{fus}} H(T_m)}{RT} \left[ 1 - \frac{T}{T_m} \right] 
+\]
+clausius claperyon equation could be useful
+\[
+\frac{\Delta_{\text{sub}} H}{RT^2} = \frac{d \ln P^{\text{sub}}}{dT} = \ln (10) \frac{d \log_{10} P^{\text{sub}}}{dT}
+\]
+different types of points on phase diagram
+\begin{itemize}
+    \item eutectic: 3 phases present, minimum melting temperature
+    \item peritectic: liquid and solid cool and then eventually form a different solid phase
+    \item horizontal tie lines
+    \item line names (liquidus, solidus)
+    \item 2 dof in liquid mixture; 1 dof in any region with tie lines; 0 dof at eutectic
+\end{itemize}
+
+\begin{figure}[ht] % Adjusted float specifier to 'ht'
+    \includegraphics[width=0.442\textwidth, frame]{solids.png}
+\end{figure}
+
+\section*{reactions}
+stoich coefficients ($\nu$) convention
+\begin{itemize}
+    \item positive for products
+    \item negative for reactants
+    \item 0 for bystanders
+\end{itemize}
+stoich constraint ($A_{i}$ are components)
+\[
+\sum \nu_{i} A_{i} = 0
+\]
+equilibrium condition
+\[
+\sum \nu_{i} \bar{G}_{i} = 0
+\]
+activity
+\[
+a = \frac{\bar{f}_{i}}{\bar{f_{i}}^{\circ}}
+\]
+gibbs compared to standard state
+\[
+\bar{G}_{i} = \bar{G}_{i}^{\circ}+RT \ln a_{i}
+\]
+equlibrium constant
+\[
+K_{a}(T) = \prod a_{i}^{\nu_{i}} = \exp \left(-\frac{\Delta_{\mathrm{rxn}}G^{\circ}}{RT}\right)
+\]
+relating $\Delta_{\mathrm{rxn}}G$ to formation energies
+\[
+\Delta_{\mathrm{rxn}}G^{\circ}(T=25^{\circ}\mathrm{C}) = \sum \nu_{i}\Delta_{\mathrm{f}}G_{i}
+\]
+adjusting $K_{a}$ for different temperatures
+\[
+\ln\frac{K_{a}(T_{2})}{K_{a}(T_{1})}=\int_{T_{1}}^{T_{2}}\frac{\Delta H_{\mathrm{rxn}}^{\circ}(T)}{R T^{2}}\;d T=-\frac{\Delta_{\mathrm{rxn}}H^{\circ}}{R}\left(\frac{1}{T_{2}}-\frac{1}{T_{1}}\right)
+\]
+  
+\subsection*{different types of systems}
+gas phase
+\[
+{\frac{-\sum\nu_{\mathrm{i}} \underline G_{\mathrm{i}}}{R T}}=\ln\left[\prod_{\mathrm{i}}\left({\frac{y_{\mathrm{i}}({\bar{f}}_{\mathrm{i}}/y_{\mathrm{i}}P)}{(f/P)_{\mathrm{i}}}}\right)^{\nu_{\mathrm{i}}}\right]
+\]
+ideal gas phase
+\[
+{\frac{-\sum\nu_{\mathrm{i}} \underline G_{\mathrm{i}}}{R T}}=\ln\left[\prod_{\mathrm{i}}y_{\mathrm{i}}^{\nu_{\mathrm{i}}}\right]
+\]
+liquid mixture
+\[
+K_{a}=\prod_{\mathrm{i}}a_{\mathrm{i}}^{\nu_{\mathrm{i}}}=\prod_{\mathrm{i}}(x_{\mathrm{i}}\gamma_{\mathrm{i}})^{\nu_{\mathrm{i}}}=K_{x}K_{\gamma}
+\]
+ideal liquid mixture
+\[
+{\frac{-\sum\nu_{\mathrm{i}}\underline{G}_{\mathrm{i}}}{R T}}=\ln\left(\prod_{\mathrm{i}}x_{\mathrm{i}}^{\nu_{\mathrm{i}}}\right)
+\]
+\subsection*{activities for certain reference states}
+species in gaseous mixture
+\[
+a_{\mathrm{i}}={\frac{y_{\mathrm{i}}P}{1\;\mathrm{bar}}}={\frac{P_{\mathrm{i}}}{1\;\mathrm{bar}}}
+\]
+liquid mixture; reference of pure liquid
+\[
+\begin{array}{c}{{a_{\mathrm{i}}=x_{\mathrm{i}}\gamma_{\mathrm{i}}}}\\ {{(\gamma_{\mathrm{i}}\to1\mathrm{~as~}x_{\mathrm{i}}\to1)}}\end{array}
+\]
+liquid mixture; reference 1 molal soln
+\[
+\begin{array}{c}{{a_{\mathrm{i}}=M_{\mathrm{i}}\gamma_{\mathrm{i}}^{\square}/(M_{\mathrm{i}}=1)}}\\ {{(\gamma_{\mathrm{i}}^{\square}\to1\mathrm{~as~}M_{\mathrm{i}}\to0)}}\end{array}
+\]
+liquid mixture; reference is infinite dilution
+\[
+\begin{array}{l}{{a_{\mathrm{i}}=x_{\mathrm{i}}\gamma_{\mathrm{i}}^{*}}}\\ {{\left(\gamma_{\mathrm{i}}^{*}\longrightarrow1\mathrm{~as~}x_{\mathrm{i}}\rightarrow0\right)}}\end{array}
+\]
+K based on concentrations
+\[
+K_{c}=\prod_{\mathrm{\bf{i}}}C_{\mathrm{i}}^{\nu_{\mathrm{i}}}=C^{\sum\nu_{\mathrm{i}}}K_{a}/K_{\gamma}
+\]
+
+\subsection*{what reference state to use}
+\begin{itemize}
+    \item Gas phase 
+    \begin{itemize}
+        \item Pure component as an ideal gas at reference pressure
+    \end{itemize}
+    \item Liquid; exists at conditions of mixture
+    \begin{itemize}
+        \item Pure liquid component at reference pressure
+        \item “Liquids that may act as a solvent”
+    \end{itemize}
+    \item Liquid; does not exist at conditions
+    \begin{itemize}
+        \item Use Henry law stuffs
+    \end{itemize}
+\end{itemize}
+
+\section*{ternary systems}
+\begin{figure}[ht] % Adjusted float specifier to 'ht'
+    \includegraphics[width=0.442\textwidth, frame]{ternary1.png}
+\end{figure}
+\begin{figure}[ht] % Adjusted float specifier to 'ht'
+    \includegraphics[width=0.442\textwidth, frame]{ternary2.png}
+\end{figure}
+
+\begin{figure}[ht] % Adjusted float specifier to 'ht'
+    \includegraphics[width=0.442\textwidth, frame]{ternary3.png}
+\end{figure}
+
+
+\end{document}
